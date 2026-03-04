@@ -1,12 +1,153 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState, useCallback } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Category, categories } from '@/data/categories';
+import { projects, Project } from '@/data/projects';
+import { useLanguage } from '@/context/LanguageContext';
+import HeroSection from '@/components/HeroSection';
+import StatsOverview from '@/components/StatsOverview';
+import WhatsAppCTA from '@/components/WhatsAppCTA';
+import WhatsAllSection from '@/components/WhatsAllSection';
+import InstantMenuSection from '@/components/InstantMenuSection';
+import WildBotSection from '@/components/WildBotSection';
+import DownloadSection from '@/components/DownloadSection';
+import FilterBar from '@/components/FilterBar';
+import ProjectCard from '@/components/ProjectCard';
+import SectionHeader from '@/components/SectionHeader';
+import ProjectPreviewModal from '@/components/ProjectPreviewModal';
+import NewsletterSection from '@/components/NewsletterSection';
+import MobileSidebar from '@/components/MobileSidebar';
+import FooterSection from '@/components/FooterSection';
 
 const Index = () => {
+  const { t } = useLanguage();
+  const [activeCategory, setActiveCategory] = useState<Category>('all');
+  const [statusFilter, setStatusFilter] = useState<'all' | 'active' | 'construction'>('all');
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  const scrollToProject = useCallback((id: string) => {
+    setActiveCategory('all');
+    setStatusFilter('all');
+    setTimeout(() => {
+      const el = document.getElementById(`project-${id}`);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        el.classList.add('ring-2', 'ring-indigo-500');
+        setTimeout(() => el.classList.remove('ring-2', 'ring-indigo-500'), 2000);
+      }
+    }, 100);
+  }, []);
+
+  const filtered = projects.filter(p => {
+    const matchCat = activeCategory === 'all' || p.category === activeCategory;
+    const matchStatus = statusFilter === 'all' ||
+      (statusFilter === 'active' && (p.status === 'live' || p.status === 'demo')) ||
+      (statusFilter === 'construction' && p.status === 'under-construction');
+    return matchCat && matchStatus;
+  });
+
+  const displayedCategories = activeCategory === 'all'
+    ? categories.filter(c => c.id !== 'all')
+    : categories.filter(c => c.id === activeCategory);
+
+  const statusButtons = [
+    { key: 'all' as const, label: t.filterAll },
+    { key: 'active' as const, label: t.filterActive },
+    { key: 'construction' as const, label: t.filterWork },
+  ];
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen relative">
+      {/* Background mesh */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <div className="absolute -top-40 -left-40 w-96 h-96 bg-indigo-500/10 rounded-full blur-[120px]" />
+        <div className="absolute -bottom-40 -right-40 w-96 h-96 bg-cyan-500/5 rounded-full blur-[120px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-violet-500/5 rounded-full blur-[120px]" />
       </div>
+
+      <div className="relative z-10">
+        <MobileSidebar onProjectClick={scrollToProject} />
+        <HeroSection />
+
+        {activeCategory === 'all' && <StatsOverview />}
+
+        <WhatsAppCTA />
+
+        {/* Mini stats */}
+        <div className="max-w-2xl mx-auto px-4 pb-8">
+          <div className="grid grid-cols-3 gap-4 text-center">
+            <div className="p-4 rounded-xl bg-hub-card border border-white/10">
+              <div className="text-2xl font-extrabold text-hub-text">{projects.length}</div>
+              <div className="text-xs text-hub-muted">{t.projects}</div>
+            </div>
+            <div className="p-4 rounded-xl bg-hub-card border border-white/10">
+              <div className="text-2xl font-extrabold text-hub-text">{categories.length - 1}</div>
+              <div className="text-xs text-hub-muted">{t.domains}</div>
+            </div>
+            <div className="p-4 rounded-xl bg-hub-card border border-white/10">
+              <div className="text-2xl font-extrabold text-emerald-400">100%</div>
+              <div className="text-xs text-hub-muted">{t.live}</div>
+            </div>
+          </div>
+        </div>
+
+        <WhatsAllSection />
+        <InstantMenuSection />
+        <WildBotSection />
+        <DownloadSection />
+
+        <FilterBar activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
+
+        {/* Status filter */}
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          <div className="flex gap-2">
+            {statusButtons.map(s => (
+              <button
+                key={s.key}
+                onClick={() => setStatusFilter(s.key)}
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                  statusFilter === s.key
+                    ? 'bg-indigo-600 text-white'
+                    : 'bg-white/5 text-hub-muted hover:text-hub-text border border-white/10'
+                }`}
+              >
+                {s.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Projects grid grouped by category */}
+        <div className="max-w-7xl mx-auto px-4 pb-16">
+          <AnimatePresence mode="wait">
+            <motion.div key={`${activeCategory}-${statusFilter}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+              {displayedCategories.map(cat => {
+                const catProjects = filtered.filter(p => p.category === cat.id);
+                if (catProjects.length === 0) return null;
+                return (
+                  <div key={cat.id} className="mb-12">
+                    <SectionHeader category={cat} count={catProjects.length} />
+                    <motion.div
+                      className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"
+                      variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+                      initial="hidden"
+                      animate="visible"
+                    >
+                      {catProjects.map(p => (
+                        <ProjectCard key={p.id} project={p} onOpenPreview={setSelectedProject} />
+                      ))}
+                    </motion.div>
+                  </div>
+                );
+              })}
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        <NewsletterSection />
+        <FooterSection />
+      </div>
+
+      <ProjectPreviewModal project={selectedProject} onClose={() => setSelectedProject(null)} />
     </div>
   );
 };

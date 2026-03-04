@@ -9,6 +9,7 @@ import WhatsAppCTA from '@/components/WhatsAppCTA';
 import WhatsAllSection from '@/components/WhatsAllSection';
 import InstantMenuSection from '@/components/InstantMenuSection';
 import WildBotSection from '@/components/WildBotSection';
+import SocietyHubStoreSection from '@/components/SocietyHubStoreSection';
 import DownloadSection from '@/components/DownloadSection';
 import FilterBar from '@/components/FilterBar';
 import ProjectCard from '@/components/ProjectCard';
@@ -93,6 +94,7 @@ const Index = () => {
         <WhatsAllSection />
         <InstantMenuSection />
         <WildBotSection />
+        <SocietyHubStoreSection />
         <DownloadSection />
 
         <FilterBar activeCategory={activeCategory} setActiveCategory={setActiveCategory} />

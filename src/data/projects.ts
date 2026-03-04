@@ -15,80 +15,515 @@ export interface Project {
 
 export const projects: Project[] = [
   // ─── RESTAURANTE (15) ───
-  { id: 'mrdelivery-home', category: 'resto', emoji: '🏠', name: 'MrDelivery — Acasă', description: 'Locul unde începe totul. Aici afli cine suntem și cum ajutăm restaurantele din România să fie mai moderne.', targetAudience: 'Restaurante din România care vor digitalizare completă.', innovationReason: 'Hub central pentru toate serviciile digitale restaurant.', link: 'https://mrdelivery.ro/', status: 'live' },
-  { id: 'mrdelivery-shop', category: 'resto', emoji: '🛒', name: 'MrDelivery Shop', description: 'Magazinul nostru online. Cumperi tot ce ai nevoie pentru livrări în câteva secunde, fără telefoane lungi.', targetAudience: 'Restaurante care au nevoie de echipamente și consumabile delivery.', innovationReason: 'Primul magazin online dedicat exclusiv industriei de delivery.', link: 'https://mrdelivery.shop/', status: 'live' },
-  { id: 'mrdelivery-online', category: 'resto', emoji: '📡', name: 'MrDelivery Online', description: 'O altă portiță de intrare în universul MrDelivery — pentru parteneri sau clienți care preferă o platformă dedicată lor.', targetAudience: 'Parteneri și clienți MrDelivery.', innovationReason: 'Platformă dedicată cu experiență personalizată.', link: 'https://mrdelivery.online/', status: 'live' },
-  { id: 'instant-menu', category: 'resto', emoji: '📸', name: 'Poze Meniu pe Loc', description: 'Scrii numele mâncării și AI-ul îți face o poză delicioasă imediat. Nu mai ai nevoie de fotograf!', targetAudience: 'Proprietari de restaurante care vor fotografii profesionale fără sesiune foto.', innovationReason: 'Motor AI cinematografic care respectă identitatea vizuală a brandului.', link: 'https://instant-menu-pictures-968474198722.us-west1.run.app/', status: 'live', videoUrl: 'https://www.youtube.com/embed/JjeXG0TIus8' },
-  { id: 'ai-clienti', category: 'resto', emoji: '🤖', name: 'AI pentru Clienți', description: 'Un asistent deștept care stă de vorbă cu clienții tăi, le recomandă mâncare și îi ajută să comande mai ușor.', targetAudience: 'Restaurante care vor customer service 24/7.', innovationReason: 'Asistent AI conversațional specializat pe industria food.', link: 'https://smart-restaurant-ai-for-clients-968474198722.us-west1.run.app/', status: 'live' },
-  { id: 'ai-echipa', category: 'resto', emoji: '👨‍🍳', name: 'AI pentru Echipă', description: 'Același asistent deștept, dar pentru angajați. Îi ajută să lucreze mai repede și să nu uite nicio comandă.', targetAudience: 'Echipe de restaurant care vor eficiență operațională.', innovationReason: 'AI intern care reduce erorile și crește productivitatea echipei.', link: 'https://smart-restaurant-ai-partener-echipa-968474198722.us-west1.run.app/', status: 'live' },
-  { id: 'gourmet-visionary', category: 'resto', emoji: '🍷', name: 'Gourmet Visionary', description: 'AI pentru restaurantele de lux. Te ajută să creezi meniuri sofisticate și experiențe de neuitat.', targetAudience: 'Restaurante fine dining și hoteluri de lux.', innovationReason: 'Singurul AI specializat pe gastronomie de lux.', link: 'https://gourmet-visionary-ai-499463360194.us-west1.run.app/', status: 'live' },
-  { id: 'mrdelivery-ai-central', category: 'resto', emoji: '🧠', name: 'MrDelivery AI Central', description: 'Creierul central al tuturor roboților noștri. De aici poți controla tot ce e deștept în restaurantul tău.', targetAudience: 'Manageri de restaurante cu multiple sisteme AI.', innovationReason: 'Panou de comandă unificat pentru toate AI-urile din restaurant.', link: 'https://mrdelivery-ai-499463360194.us-west1.run.app/', status: 'live' },
-  { id: 'laborator-texte', category: 'resto', emoji: '✍️', name: 'Laborator de Texte', description: 'Scrie singur postări pentru Facebook, descrieri de mâncare și mesaje pentru clienți. Tu doar alegi ce-ți place!', targetAudience: 'Restaurante fără timp pentru content marketing.', innovationReason: 'Generator de conținut specializat pe industria food.', link: 'https://mrdelivery-ai-content-lab-499463360194.us-west1.run.app/', status: 'live' },
-  { id: 'foodiequest', category: 'resto', emoji: '🗺️', name: 'FoodieQuest', description: 'Aplicația care te ajută să găsești restaurante noi pe gustul tău. E ca un prieten care știe mereu unde se mănâncă bine.', targetAudience: 'Foodie-i și consumatori care caută restaurante noi.', innovationReason: 'Recomandări personalizate bazate pe gusturi și preferințe.', link: 'https://foodiequest-968474198722.us-west1.run.app/', status: 'live' },
-  { id: 'audit-ai', category: 'resto', emoji: '🔍', name: 'Audit AI', description: 'Se uită la afacerea ta și îți spune ce merge bine și ce nu. E ca un consultant expert care nu doarme niciodată.', targetAudience: 'Restaurante care vor feedback obiectiv.', innovationReason: 'Audit automat complet cu recomandări acționabile.', link: 'https://audit-by-mrdelivery-ai-499463360194.us-west1.run.app/', status: 'live' },
-  { id: 'audit-michelin', category: 'resto', emoji: '⭐', name: 'Audit Michelin', description: 'Vrei o stea Michelin? Acest AI te verifică după cele mai înalte standarde din lume și îți spune ce să schimbi.', targetAudience: 'Restaurante care aspiră la standarde Michelin.', innovationReason: 'Evaluare AI bazată pe criteriile reale Michelin.', link: 'https://audit-michelin-by-mrdelivery-499463360194.us-west1.run.app/', status: 'live' },
-  { id: 'audit-lovable', category: 'resto', emoji: '🔐', name: 'Audit MrDelivery (Lovable)', description: 'O versiune mai nouă și mai vizuală a instrumentului de audit — interfață modernă, același rezultat: știi exact ce să îmbunătățești la restaurant.', targetAudience: 'Restaurante care preferă o interfață modernă de audit.', innovationReason: 'Versiune vizuală a auditului cu UX îmbunătățit.', link: 'https://audit-mrdelivery.lovable.app/', status: 'live' },
-  { id: 'restomaster', category: 'resto', emoji: '👨‍🍳', name: 'RestoMaster', description: 'Managerul tău digital care se ocupă de tot: rezervări, marketing și analize. Tu doar te ocupi de mâncare!', targetAudience: 'Manageri de restaurante care vor automatizare completă.', innovationReason: 'All-in-one restaurant management cu AI integrat.', link: 'https://restomaster-ai-765729445735.us-west1.run.app/', status: 'live' },
-  { id: 'misterdelivery-bot', category: 'resto', emoji: '🤵', name: 'MisterDelivery Bot', description: 'Un chelner digital care preia comenzi și răspunde la întrebări pe chat, zi și noapte, fără să obosească.', targetAudience: 'Restaurante care vor un chatbot de comenzi 24/7.', innovationReason: 'Chelner AI care procesează comenzi automat.', link: 'https://misterdeliverybot.lovable.app/', status: 'live' },
+  {
+    id: 'mrdelivery-home', category: 'resto', emoji: '🏠',
+    name: 'MrDelivery — Pagina Principală',
+    description: 'Website-ul oficial MrDelivery.ro — platforma centrală care prezintă toate serviciile digitale pentru restaurante din România. Aici găsești informații despre cine suntem, ce oferim și cum putem transforma orice restaurant într-un business digital modern. Include secțiuni despre AI, automatizare, delivery optimization și consultanță.',
+    targetAudience: 'Proprietari și manageri de restaurante din România care vor să își digitalizeze complet afacerea — de la comenzi online și meniu digital, până la marketing automat și asistență AI.',
+    innovationReason: 'Primul hub digital din România dedicat exclusiv industriei HoReCa, care reunește sub un singur brand peste 15 instrumente AI și platforme de automatizare specifice restaurantelor.',
+    link: 'https://mrdelivery.ro/', status: 'live'
+  },
+  {
+    id: 'mrdelivery-shop', category: 'resto', emoji: '🛒',
+    name: 'MrDelivery Shop — Magazin Online',
+    description: 'Magazin online dedicat industriei de delivery și restaurante. Aici poți comanda echipamente profesionale (cutii termice, pungi branduite, ambalaje eco), consumabile pentru bucătărie și materiale de marketing. Totul vine livrat la restaurant, fără să pierzi timp cu deplasări.',
+    targetAudience: 'Restaurante, dark kitchens și servicii de catering care au nevoie rapid de echipamente de delivery, ambalaje profesionale și consumabile — fără să sune la 10 furnizori diferiți.',
+    innovationReason: 'Singurul magazin online din România specializat 100% pe echipamente și consumabile pentru industria de food delivery, cu prețuri optimizate și livrare rapidă.',
+    link: 'https://mrdelivery.shop/', status: 'live'
+  },
+  {
+    id: 'mrdelivery-online', category: 'resto', emoji: '📡',
+    name: 'MrDelivery Online — Portal Parteneri',
+    description: 'Portal digital dedicat partenerilor și clienților MrDelivery. Oferă acces la resurse exclusive, documentație, tutoriale și instrumente de management. Partenerii pot urmări performanța, accesa rapoarte și gestiona colaborarea din acest dashboard centralizat.',
+    targetAudience: 'Partenerii activi MrDelivery — restaurante afiliate, colaboratori și clienți care folosesc deja platformele noastre și au nevoie de un punct central de acces și management.',
+    innovationReason: 'Portal partenerial cu self-service complet — partenerii își gestionează singuri contul, văd statistici și accesează instrumente fără să aștepte suport manual.',
+    link: 'https://mrdelivery.online/', status: 'live'
+  },
+  {
+    id: 'instant-menu', category: 'resto', emoji: '📸',
+    name: 'Instant Menu Pictures — Poze Meniu AI',
+    description: 'Aplicație AI care generează fotografii profesionale de meniu doar din text. Scrii „Paste Carbonara cu parmezan și busuioc" și primești instant o poză cinematografică, de calitate Michelin, gata de publicat pe meniu, site sau rețele sociale. Suportă logo branding, export multi-format și procesare bulk.',
+    targetAudience: 'Proprietari de restaurante, manageri de meniu și agenții de marketing food care au nevoie de fotografii profesionale fără să angajeze fotograf, fără ședință foto și fără echipament scump.',
+    innovationReason: 'Motor AI cinematografic unic care generează imagini food de calitate Michelin în sub 60 de secunde, cu respectarea identității vizuale a brandului — logo, culori și stil.',
+    link: 'https://instant-menu-pictures-968474198722.us-west1.run.app/', status: 'live',
+    videoUrl: 'https://www.youtube.com/embed/JjeXG0TIus8'
+  },
+  {
+    id: 'ai-clienti', category: 'resto', emoji: '🤖',
+    name: 'AI Assistant pentru Clienți',
+    description: 'Chatbot AI specializat pe industria restaurantelor, care interacționează direct cu clienții finali. Răspunde la întrebări despre meniu, prețuri, alergeni și ingrediente, recomandă preparate personalizat, preia comenzi și oferă suport 24/7. Se integrează pe site-ul restaurantului sau pe WhatsApp.',
+    targetAudience: 'Restaurante de orice dimensiune care vor un customer service automat, disponibil non-stop, care răspunde instant la întrebări și ghidează clienții spre comandă fără intervenție umană.',
+    innovationReason: 'Asistent AI conversațional antrenat specific pe industria food — cunoaște terminologia culinară, înțelege preferințe alimentare și face upselling inteligent bazat pe context.',
+    link: 'https://smart-restaurant-ai-for-clients-968474198722.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'ai-echipa', category: 'resto', emoji: '👨‍🍳',
+    name: 'AI Assistant pentru Echipă',
+    description: 'Asistent AI intern dedicat personalului de restaurant. Ajută chelnerii să răspundă la întrebări despre meniu, oferă instrucțiuni de preparare bucătarilor, gestionează checklist-uri de deschidere/închidere și alertează managerii despre probleme operaționale. Reduce erorile umane și accelerează training-ul noilor angajați.',
+    targetAudience: 'Manageri de restaurante cu echipe de 5-50+ angajați care vor să reducă erorile, să accelereze onboarding-ul și să mențină standarde constante de calitate fără supraveghere permanentă.',
+    innovationReason: 'Primul AI intern pentru restaurante care funcționează ca un „coleg digital" — nu doar răspunde la întrebări, ci monitorizează activ procesele și semnalează devieri de la standarde.',
+    link: 'https://smart-restaurant-ai-partener-echipa-968474198722.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'gourmet-visionary', category: 'resto', emoji: '🍷',
+    name: 'Gourmet Visionary AI',
+    description: 'Platformă AI premium pentru restaurantele fine dining. Creează meniuri de degustare sofisticate, sugerează perechi vin-mâncare, generează descrieri poetice pentru preparate și oferă consultanță culinară de nivel Michelin. Include module de food styling și prezentare.',
+    targetAudience: 'Restaurante fine dining, hoteluri de 4-5 stele, bucătari-șefi și sommelieri care caută inspirație culinară de top și vor să ridice experiența gastronomică la nivel de artă.',
+    innovationReason: 'Singurul AI din lume specializat pe gastronomie de lux — antrenat pe meniuri Michelin, tehnici de haute cuisine și principii de food pairing avansat.',
+    link: 'https://gourmet-visionary-ai-499463360194.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'mrdelivery-ai-central', category: 'resto', emoji: '🧠',
+    name: 'MrDelivery AI Central — Panou de Comandă',
+    description: 'Dashboard central unificat de unde controlezi toate sistemele AI ale restaurantului. Vezi statusul fiecărui bot (client, echipă, marketing), monitorizezi performanța, ajustezi setări și primești rapoarte consolidate. E „creierul" digital al întregului ecosistem MrDelivery.',
+    targetAudience: 'Manageri de restaurante care folosesc mai multe instrumente AI MrDelivery și au nevoie de un singur ecran de control pentru a vedea totul — status, performanță, alerte și setări.',
+    innovationReason: 'Panou de comandă centralizat care unifică toate AI-urile într-o singură interfață — fără să treci prin 10 aplicații separate, vezi totul dintr-un singur loc.',
+    link: 'https://mrdelivery-ai-499463360194.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'laborator-texte', category: 'resto', emoji: '✍️',
+    name: 'Laborator de Texte AI',
+    description: 'Generator de conținut text specializat pe restaurante. Creează automat: postări Facebook/Instagram, descrieri de preparate pentru meniu, mesaje promoționale WhatsApp, texte pentru site, răspunsuri la recenzii Google și email-uri de marketing. Toate adaptate pe tonul și brandul restaurantului.',
+    targetAudience: 'Restaurante care nu au timp sau buget pentru un copywriter, dar au nevoie constant de texte profesionale pentru social media, meniu, campanii și comunicare cu clienții.',
+    innovationReason: 'Generator de conținut antrenat exclusiv pe industria food — știe ce cuvinte vând, ce emoții declanșează pofta și cum să scrie pentru fiecare platformă (meniu vs. Instagram vs. Google).',
+    link: 'https://mrdelivery-ai-content-lab-499463360194.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'foodiequest', category: 'resto', emoji: '🗺️',
+    name: 'FoodieQuest — Descoperă Restaurante',
+    description: 'Aplicație de descoperire culinară cu AI. Spui ce poftești, ce buget ai și unde te afli, iar AI-ul îți recomandă restaurantele perfecte. Include filtre pentru alergeni, stil culinar, atmosferă, rating și disponibilitate. Ca un prieten foodie care știe mereu unde se mănâncă bine.',
+    targetAudience: 'Foodie-i pasionați, turiști și oricine caută un restaurant nou — fie pentru o cină romantică, un prânz rapid sau o experiență culinară memorabilă.',
+    innovationReason: 'Recomandări AI personalizate care învață din preferințele tale — cu cât folosești mai mult, cu atât sugestiile sunt mai precise. Nu doar filtrează, ci înțelege ce îți place.',
+    link: 'https://foodiequest-968474198722.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'audit-ai', category: 'resto', emoji: '🔍',
+    name: 'Audit AI — Analiză Restaurant',
+    description: 'Instrument de audit digital complet pentru restaurante. Analizează automat: calitatea meniului, prețurile vs. piața, prezența online, recenziile clienților, eficiența operațională și strategia de marketing. Generează un raport detaliat cu note, probleme identificate și recomandări concrete de îmbunătățire.',
+    targetAudience: 'Proprietari și manageri de restaurante care vor o evaluare obiectivă, bazată pe date, a afacerii lor — fără bias-ul unui consultant care vrea să te impresioneze.',
+    innovationReason: 'Audit 100% automat care analizează zeci de parametri simultan și generează un raport acționabil în minute, nu în săptămâni — la o fracțiune din costul unui consultant tradițional.',
+    link: 'https://audit-by-mrdelivery-ai-499463360194.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'audit-michelin', category: 'resto', emoji: '⭐',
+    name: 'Audit Michelin — Evaluare Premium',
+    description: 'Evaluare AI bazată pe criteriile reale ale ghidului Michelin. Analizează: calitatea ingredientelor, tehnicile de gătit, raportul calitate-preț, consistența preparatelor și personalitatea bucătarului-șef. Primești un scor detaliat pe fiecare criteriu și un plan de acțiune pentru a te apropia de o stea Michelin.',
+    targetAudience: 'Restaurante ambițioase care aspiră la recunoaștere Michelin, bucătari-șefi care vor feedback de nivel internațional și proprietari care vor să ridice standardele la maximum.',
+    innovationReason: 'Primul instrument AI din lume care evaluează restaurante folosind criteriile oficiale Michelin — democratizează accesul la feedback de nivel mondial pentru orice restaurant.',
+    link: 'https://audit-michelin-by-mrdelivery-499463360194.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'audit-lovable', category: 'resto', emoji: '🔐',
+    name: 'Audit MrDelivery — Interfață Modernă',
+    description: 'Versiunea redesignată a instrumentului de audit restaurant, cu interfață modernă și intuitivă. Aceeași analiză profundă — meniu, prețuri, recenzii, operațiuni — dar într-un format vizual mai plăcut, cu grafice interactive, scoruri colorate și recomandări pas-cu-pas.',
+    targetAudience: 'Restaurante care preferă o experiență vizuală modernă și prietenoasă când își analizează afacerea, cu grafice clare și navigare intuitivă.',
+    innovationReason: 'UX complet redesignat cu dashboard-uri vizuale, grafice interactive și flow simplificat — aceeași putere analitică, dar mult mai ușor de folosit și interpretat.',
+    link: 'https://audit-mrdelivery.lovable.app/', status: 'live'
+  },
+  {
+    id: 'restomaster', category: 'resto', emoji: '👨‍🍳',
+    name: 'RestoMaster — Management All-in-One',
+    description: 'Platformă completă de management pentru restaurante, cu AI integrat. Include: gestionare rezervări, planificare meniu, monitorizare stocuri, rapoarte financiare, calendar de marketing, management echipă și analiză satisfacție clienți. Un singur dashboard pentru absolut totul.',
+    targetAudience: 'Manageri de restaurante care jonglează cu 10 aplicații diferite și vor o singură platformă care face totul — de la rezervări la contabilitate, de la marketing la HR.',
+    innovationReason: 'All-in-one restaurant management cu AI care nu doar organizează, ci și anticipează — prevede zilele aglomerate, sugerează promoții și alertează despre probleme înainte să apară.',
+    link: 'https://restomaster-ai-765729445735.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'misterdelivery-bot', category: 'resto', emoji: '🤵',
+    name: 'MisterDelivery Bot — Chelner Digital',
+    description: 'Chatbot AI care funcționează ca un chelner virtual 24/7. Preia comenzi prin chat (pe site sau WhatsApp), recomandă preparate, informează despre alergeni și ingrediente, procesează cereri speciale și trimite comanda direct la bucătărie. Nu obosește, nu uită și e mereu politicos.',
+    targetAudience: 'Restaurante cu volum mare de comenzi care vor să automatizeze procesul de comandă, să reducă erorile și să ofere o experiență de ordering disponibilă 24/7.',
+    innovationReason: 'Chelner AI cu personalitate configurabilă care nu doar preia comenzi, ci face upselling inteligent, memorează preferințele clienților fideli și se adaptează la orele de vârf.',
+    link: 'https://misterdeliverybot.lovable.app/', status: 'live'
+  },
 
   // ─── UNELTE AI (12) ───
-  { id: 'ai-studio', category: 'ai', emoji: '🎨', name: 'AI Studio', description: 'Locul tău de joacă creativ. Faci desene, logo-uri și reclame frumoase cu ajutorul AI-ului, chiar dacă nu ești artist.', targetAudience: 'Creatori de conținut și antreprenori fără skills de design.', innovationReason: 'Studio creativ AI complet fără experiență necesară.', link: 'https://aistudiomrdelivery.lovable.app/', status: 'live' },
-  { id: 'studio-v1', category: 'ai', emoji: '🖥️', name: 'Studio MrDelivery (v1)', description: 'Prima versiune a studioului digital — un spațiu de lucru creativ pentru producerea de conținut vizual și materiale de brand.', targetAudience: 'Echipe de marketing și design.', innovationReason: 'Primul studio digital MrDelivery pentru conținut vizual.', link: 'https://mrdelivery-studio-765729445735.us-west1.run.app/', status: 'live' },
-  { id: 'studio-v2', category: 'ai', emoji: '🖼️', name: 'Studio MrDelivery (v2)', description: 'A doua versiune a studioului — probabil o variantă mai nouă sau un mediu separat pentru teste și proiecte speciale.', targetAudience: 'Echipe creative care au nevoie de versiuni avansate.', innovationReason: 'Versiune îmbunătățită cu funcționalități noi.', link: 'https://mrdelivery-studio-588412172690.us-west1.run.app/', status: 'live' },
-  { id: 'creative-studio', category: 'ai', emoji: '✨', name: 'Creative Studio MrDelivery', description: 'Focusat 100% pe idei creative — concepte vizuale, campanii, proiecte artistice. Locul unde se nasc ideile bune.', targetAudience: 'Artiști digitali și branduri creative.', innovationReason: 'Platformă dedicată exclusiv procesului creativ.', link: 'https://mrdelivery-creative-studio-765729445735.us-west1.run.app/', status: 'live' },
-  { id: 'creator-studio', category: 'ai', emoji: '🎭', name: 'Creator Studio', description: 'Ajutorul tău pentru YouTube și TikTok. Îți dă idei de clipuri, scrie scenarii și te ajută să devii viral.', targetAudience: 'Content creators pe YouTube și TikTok.', innovationReason: 'AI specializat pe conținut video viral.', link: 'https://ai-creator-studio-968474198722.us-west1.run.app/', status: 'live' },
-  { id: 'nano-banana', category: 'ai', emoji: '🍌', name: 'Nano Banana Pro', description: 'Un tool AI puternic pentru automatizări rapide și inteligente. Versiunea completă — pentru cei care vor să facă mai mult în mai puțin timp.', targetAudience: 'Power users care vor automatizări avansate.', innovationReason: 'Platformă de automatizare AI rapidă și versatilă.', link: 'https://nano-banana-pro-968474198722.us-west1.run.app/', status: 'live' },
-  { id: 'nano-banana-demo', category: 'ai', emoji: '🍌', name: 'Nano Banana Pro — Demo Gratuit', description: 'Testezi Nano Banana Pro fără să te angajezi la nimic — explorezi toate funcțiile și decizi dacă îți e util.', targetAudience: 'Utilizatori curioși care vor să testeze înainte de a se angaja.', innovationReason: 'Demo complet funcțional fără angajament.', link: 'https://nano-banana-pro-demo-968474198722.us-west1.run.app/', status: 'demo' },
-  { id: 'aura-ai', category: 'ai', emoji: '💫', name: 'Aura AI', description: 'Un asistent AI cu personalitate distinctă — perfect pentru customer service elegant sau pentru a da o voce unică brandului tău.', targetAudience: 'Branduri care vor un AI cu personalitate unică.', innovationReason: 'AI cu personalitate configurabilă per brand.', link: 'https://aura-ai-968474198722.us-west1.run.app/', status: 'live' },
-  { id: 'snapshot-sparkle', category: 'ai', emoji: '🎬', name: 'Snapshot Sparkle', description: 'Transformi poze simple în videoclipuri mișcătoare cu un singur click. Perfect pentru postări care atrag atenția.', targetAudience: 'Social media managers și content creators.', innovationReason: 'Conversie instant foto-to-video cu efecte.', link: 'https://snapshot-sparkle-video.lovable.app/', status: 'live' },
-  { id: 'app-creator', category: 'ai', emoji: '🛠️', name: 'App Creator', description: 'Vrei propria ta aplicație? Spune-i AI-ului ce vrei să facă și el o construiește pentru tine, fără să scrii cod.', targetAudience: 'Non-programatori care vor aplicații custom.', innovationReason: 'Creare de aplicații fără cod prin conversație.', link: 'https://exact-app-creator.lovable.app/', status: 'live' },
-  { id: 'magic-reveal', category: 'ai', emoji: '🪄', name: 'Magic Reveal Orchestrator', description: 'Creează prezentări și dezvăluiri dramatice cu efecte vizuale magice — perfect pentru lansări de produse sau momente speciale.', targetAudience: 'Event planners și echipe de marketing.', innovationReason: 'Orchestrare automată de reveal-uri cu efecte vizuale.', link: 'https://magic-reveal-orchestrator.lovable.app/', status: 'live' },
-  { id: 'museflow', category: 'ai', emoji: '🎵', name: 'MuseFlow', description: 'Te ajută să intri în starea de concentrare maximă ("flow") — ideal pentru scriitori, muzicieni sau oricine lucrează creativ și vrea să fie mai productiv.', targetAudience: 'Creativi care vor productivitate maximă.', innovationReason: 'AI care optimizează starea de flow personal.', link: 'https://museflow-765729445735.us-west1.run.app/', status: 'live' },
+  {
+    id: 'ai-studio', category: 'ai', emoji: '🎨',
+    name: 'AI Studio — Creație Vizuală',
+    description: 'Studio creativ complet alimentat de AI. Generează logo-uri, bannere publicitare, postări social media, materiale de brand și ilustrații — totul fără skills de design. Alegi stilul, scrii ce vrei și AI-ul creează variante profesionale pe care le poți edita și exporta instant.',
+    targetAudience: 'Antreprenori, freelanceri și creatori de conținut care au nevoie de materiale vizuale profesionale dar nu au buget pentru designer sau nu știu Photoshop.',
+    innovationReason: 'Studio creativ AI cu workflow ghidat — nu doar generează imagini, ci te ghidează prin procesul creativ: de la brief la variante finale, cu feedback și sugestii de îmbunătățire.',
+    link: 'https://aistudiomrdelivery.lovable.app/', status: 'live'
+  },
+  {
+    id: 'studio-v1', category: 'ai', emoji: '🖥️',
+    name: 'Studio MrDelivery v1 — Producție Conținut',
+    description: 'Prima versiune a studioului digital MrDelivery. Spațiu de lucru creativ pentru producerea de conținut vizual: editare foto, generare materiale de brand, crearea de colaje și compoziții pentru meniuri, flyere și postări sociale. Interfață funcțională cu focus pe productivitate.',
+    targetAudience: 'Echipe de marketing ale restaurantelor și designeri juniori care au nevoie de un spațiu de lucru digital rapid pentru a produce conținut vizual constant.',
+    innovationReason: 'Primul studio digital dedicat industriei food — cu template-uri, fonturi și stiluri pre-optimizate pentru restaurante și delivery.',
+    link: 'https://mrdelivery-studio-765729445735.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'studio-v2', category: 'ai', emoji: '🖼️',
+    name: 'Studio MrDelivery v2 — Versiune Avansată',
+    description: 'A doua generație a studioului MrDelivery, cu funcționalități extinse: generare AI mai puternică, editare avansată, template-uri noi, suport multi-format și performanță îmbunătățită. Include module experimentale și acces la cele mai noi modele AI de generare vizuală.',
+    targetAudience: 'Utilizatori avansați și echipe creative care au nevoie de funcționalități extinse, acces la modele AI noi și capabilități experimentale de generare vizuală.',
+    innovationReason: 'Versiune next-gen cu modele AI actualizate, canvas colaborativ și pipeline de export automatizat pentru multiple platforme simultan.',
+    link: 'https://mrdelivery-studio-588412172690.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'creative-studio', category: 'ai', emoji: '✨',
+    name: 'Creative Studio — Idei & Concepte',
+    description: 'Platformă dedicată exclusiv procesului creativ și ideilor. Brainstorming asistat de AI pentru campanii vizuale, concepte de brand, proiecte artistice și direcții creative. Generează moodboard-uri, palete de culori, concepte vizuale și variante creative pornind de la un brief simplu.',
+    targetAudience: 'Directori creativi, artiști digitali, branduri care caută inspirație și echipe de marketing care vor concepte creative fresh și originale generate rapid.',
+    innovationReason: 'Nu doar execută, ci inspiră — AI-ul propune direcții creative neașteptate, combinații de stiluri și concepte pe care un om le-ar rata, accelerând procesul de ideație de 10x.',
+    link: 'https://mrdelivery-creative-studio-765729445735.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'creator-studio', category: 'ai', emoji: '🎭',
+    name: 'Creator Studio — Video & Social Media',
+    description: 'Asistent AI complet pentru creatorii de conținut video. Generează idei de clipuri virale, scrie scenarii pas-cu-pas, sugerează thumbnail-uri captivante, creează titluri SEO-friendly și planifică calendarul de publicare. Acoperă YouTube, TikTok, Instagram Reels și Shorts.',
+    targetAudience: 'YouTuberi, TikTokeri, influenceri și creatori de conținut care vor să producă mai mult conținut de calitate, să crească organic și să nu rămână niciodată fără idei.',
+    innovationReason: 'AI specializat pe conținut video viral — analizează trenduri în timp real, studiază ce funcționează pe fiecare platformă și adaptează sugestiile la nișa și audiența ta specifică.',
+    link: 'https://ai-creator-studio-968474198722.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'nano-banana', category: 'ai', emoji: '🍌',
+    name: 'Nano Banana Pro — Automatizări AI',
+    description: 'Platformă puternică de automatizări AI pentru power users. Creează workflow-uri complexe, automatizează task-uri repetitive, procesează date în bulk și conectează servicii diferite între ele. Include: generare text, analiză date, procesare imagini, scraping web și integrări API — totul din aceeași interfață.',
+    targetAudience: 'Antreprenori tech-savvy, growth hackeri și echipe de operațiuni care vor să automatizeze tot ce se poate — de la procesarea email-urilor la generarea de rapoarte complexe.',
+    innovationReason: 'Platformă de automatizare AI all-in-one care combină puterea mai multor instrumente într-o singură interfață — nu ai nevoie de Zapier + ChatGPT + alte 5 tool-uri separate.',
+    link: 'https://nano-banana-pro-968474198722.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'nano-banana-demo', category: 'ai', emoji: '🍌',
+    name: 'Nano Banana Pro — Demo Gratuit',
+    description: 'Versiunea demo completă a Nano Banana Pro. Testezi toate funcționalitățile fără cont și fără plată: automatizări, generare conținut, procesare date și workflow-uri. Ideal pentru a explora ce poate face platforma înainte de a te decide. Funcțional 100%, cu limite de utilizare.',
+    targetAudience: 'Utilizatori curioși care vor să testeze platforma de automatizare înainte de a se angaja — pot explora toate funcțiile și vedea rezultate reale fără niciun risc.',
+    innovationReason: 'Demo complet funcțional, nu doar un slideshow — testezi cu date reale, vezi rezultate reale și decizi informat dacă platforma este pentru tine.',
+    link: 'https://nano-banana-pro-demo-968474198722.us-west1.run.app/', status: 'demo'
+  },
+  {
+    id: 'aura-ai', category: 'ai', emoji: '💫',
+    name: 'Aura AI — Asistent cu Personalitate',
+    description: 'Asistent AI cu personalitate distinctă și configurabilă. Spre deosebire de chatbot-urile generice, Aura AI poate fi programat cu un ton specific (formal, prietenos, amuzant, elegant), cunoștințe de domeniu și stil de comunicare unic. Perfect pentru branduri care vor un AI care „sună" ca ei.',
+    targetAudience: 'Branduri premium, companii de servicii și antreprenori care vor un AI cu voce proprie — nu un chatbot generic, ci un asistent care reflectă personalitatea și valorile brandului.',
+    innovationReason: 'AI cu personalitate complet configurabilă — de la tonul vocii la nivelul de formalitate, de la umor la expertiză tehnică. Fiecare brand primește un AI unic.',
+    link: 'https://aura-ai-968474198722.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'snapshot-sparkle', category: 'ai', emoji: '🎬',
+    name: 'Snapshot Sparkle — Foto to Video',
+    description: 'Transformă orice fotografie într-un videoclip captivant cu un singur click. Adaugă mișcare cinematică, efecte vizuale, tranziții fluide și muzică de fundal. Exportă direct pentru Instagram Reels, TikTok, YouTube Shorts sau Stories. Perfect pentru conținut social media dinamic.',
+    targetAudience: 'Social media managers, restaurante, magazini online și creatori de conținut care au fotografii bune dar au nevoie de video-uri captivante fără skills de editare video.',
+    innovationReason: 'Conversie instant foto-to-video cu AI — nu doar zoom-uri simple, ci mișcări cinematice inteligente, efecte de particule și tranziții profesionale generate automat.',
+    link: 'https://snapshot-sparkle-video.lovable.app/', status: 'live'
+  },
+  {
+    id: 'app-creator', category: 'ai', emoji: '🛠️',
+    name: 'App Creator — Aplicații fără Cod',
+    description: 'Platformă no-code unde îți construiești propria aplicație doar descriind ce vrei. Spui „Vreau o aplicație de rezervări pentru salon" și AI-ul generează interfața, logica și funcționalitățile. Poți personaliza design-ul, adăuga funcții noi și publica aplicația — totul fără să scrii o linie de cod.',
+    targetAudience: 'Non-programatori cu idei de aplicații — antreprenori, freelanceri, proprietari de business-uri mici care au nevoie de o aplicație custom dar nu au buget pentru dezvoltatori.',
+    innovationReason: 'Creare de aplicații prin conversație naturală — descrii ce vrei în cuvinte simple, AI-ul înțelege, construiește și te lasă să ajustezi. De la idee la aplicație funcțională în minute.',
+    link: 'https://exact-app-creator.lovable.app/', status: 'live'
+  },
+  {
+    id: 'magic-reveal', category: 'ai', emoji: '🪄',
+    name: 'Magic Reveal — Prezentări Dramatice',
+    description: 'Creează momente de „reveal" spectaculoase cu efecte vizuale magice. Perfect pentru lansări de produse, dezvăluiri de logo, anunțuri importante sau momente speciale la evenimente. Orchestrează automat secvențe de animații, efecte de lumină, tranziții și countdown-uri dramatice.',
+    targetAudience: 'Event planners, echipe de marketing, companii care lansează produse noi și oricine vrea să transforme un anunț obișnuit într-un moment memorabil și cinematic.',
+    innovationReason: 'Orchestrare automată de reveal-uri cu efecte vizuale de nivel Hollywood — fără echipă de producție, fără After Effects, doar AI și creativitate.',
+    link: 'https://magic-reveal-orchestrator.lovable.app/', status: 'live'
+  },
+  {
+    id: 'museflow', category: 'ai', emoji: '🎵',
+    name: 'MuseFlow — Productivitate Creativă',
+    description: 'Aplicație AI care te ajută să intri și să menții starea de „flow" — concentrarea maximă în care lucrezi cel mai bine. Combină tehnici de focus (Pomodoro, deep work), muzică ambientală generată AI, blocarea distragatorilor și tracking-ul productivității. Te cunoaște și se adaptează la ritmul tău.',
+    targetAudience: 'Scriitori, muzicieni, programatori, designeri și oricine lucrează creativ și vrea să fie mai productiv — să petreacă mai mult timp „în zona" și mai puțin timp procrastinând.',
+    innovationReason: 'AI care nu doar măsoară productivitatea, ci o optimizează activ — învață când ești cel mai productiv, ajustează mediul digital și te ghidează spre starea de flow.',
+    link: 'https://museflow-765729445735.us-west1.run.app/', status: 'live'
+  },
 
   // ─── MARKETING (7) ───
-  { id: 'adfusion', category: 'mkt', emoji: '🏢', name: 'AdFusion', description: 'O agenție de publicitate care lucrează singură. Se ocupă de clienți și reclame ca o echipă de profesioniști, dar totul e automat.', targetAudience: 'Afaceri mici care nu-și permit o agenție de marketing.', innovationReason: 'Agenție de publicitate complet automatizată.', link: 'https://adfusion-ai-agency-os-968474198722.us-west1.run.app/', status: 'live' },
-  { id: 'viral-architect', category: 'mkt', emoji: '🔥', name: 'Viral Architect', description: 'Spune-i ce vrei să vinzi și el îți face o reclamă care se va răspândi peste tot pe internet.', targetAudience: 'Branduri care vor campanii virale.', innovationReason: 'AI care proiectează conținut viral prin design.', link: 'https://viral-ad-architect-968474198722.us-west1.run.app/', status: 'live' },
-  { id: 'one-image-ad', category: 'mkt', emoji: '🖼️', name: 'One Image Ad Engine', description: 'O singură imagine = o campanie întreagă. AI-ul preia poza ta și creează automat textul, formatul și mesajul perfect pentru reclamă.', targetAudience: 'Marketeri care vor campanii rapide din o singură imagine.', innovationReason: 'Campanie completă generată dintr-o singură imagine.', link: 'https://one-image-ad-engine-968474198722.us-west1.run.app/', status: 'live' },
-  { id: 'leadgenius', category: 'mkt', emoji: '🎯', name: 'LeadGenius', description: 'Găsește singur oameni care ar vrea să cumpere de la tine. E ca un detectiv care îți aduce clienți noi.', targetAudience: 'Echipe de vânzări care au nevoie de lead-uri calificate.', innovationReason: 'Generare automată de lead-uri cu AI.', link: 'https://leadgenius-ai-968474198722.us-west1.run.app/', status: 'live' },
-  { id: 'mega-seo', category: 'mkt', emoji: '🔎', name: 'Mega SEO Audit Pro', description: 'Analizează siteul tău și îți spune de ce nu apare pe prima pagină Google și ce trebuie să faci exact ca să urci în clasament.', targetAudience: 'Site-uri web care vor trafic organic mai mare.', innovationReason: 'Audit SEO complet cu plan de acțiune concret.', link: 'https://mega-seo-audit-pro-961521792666.us-west1.run.app/', status: 'live' },
-  { id: 'seo-mastermind', category: 'mkt', emoji: '🏆', name: 'SEO Mastermind Mega Audit Pro', description: 'Versiunea avansată a auditului SEO — analiză mai profundă, mai multe recomandări și un plan de acțiune detaliat pentru a domina Google.', targetAudience: 'Experți SEO și agenții digitale.', innovationReason: 'Cel mai avansat audit SEO AI din piață.', link: 'https://seo-mastermind-mega-audit-pro-765729445735.us-west1.run.app/', status: 'live' },
-  { id: 'agent-promovator', category: 'mkt', emoji: '📢', name: 'Agent Promovator — Consultant Marketing', description: 'Un consultant de marketing AI disponibil non-stop — îți dă sfaturi, strategii și idei concrete pentru a-ți promova mai bine afacerea online.', targetAudience: 'Antreprenori care au nevoie de consultanță marketing.', innovationReason: 'Consultant marketing AI disponibil 24/7.', link: 'https://agentpromovator-consultan-marketing-online-765729445735.us-west1.run.app/', status: 'live' },
+  {
+    id: 'adfusion', category: 'mkt', emoji: '🏢',
+    name: 'AdFusion — Agenție AI de Publicitate',
+    description: 'O agenție de publicitate complet automatizată. AdFusion se ocupă de tot ce face o agenție tradițională: creează reclame, scrie texte publicitare, generează imagini, planifică campanii, targetează audiențe și optimizează bugetul. Dar totul este făcut de AI, instant și la o fracțiune din cost.',
+    targetAudience: 'Afaceri mici și mijlocii care nu-și permit o agenție de marketing tradițională dar au nevoie de campanii publicitare profesionale pe Facebook, Google și Instagram.',
+    innovationReason: 'Prima agenție de publicitate 100% AI din România — livrează în minute ce o agenție tradițională livrează în săptămâni, la 1/10 din cost.',
+    link: 'https://adfusion-ai-agency-os-968474198722.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'viral-architect', category: 'mkt', emoji: '🔥',
+    name: 'Viral Architect — Campanii Virale',
+    description: 'Tool AI care proiectează campanii cu potențial viral. Analizează trendurile actuale, studiază ce funcționează pe fiecare platformă și creează conținut optimizat pentru sharing. Generează: hook-uri captivante, vizualuri shareable, strategii de distribuție și calendare de publicare.',
+    targetAudience: 'Branduri ambitoase, startup-uri în creștere și echipe de marketing care vor ca mesajul lor să se răspândească organic — fără bugete uriașe de advertising.',
+    innovationReason: 'AI care nu ghicește ce devine viral, ci proiectează viralitatea prin design — analizează milioane de postări virale și aplică pattern-urile de succes la conținutul tău.',
+    link: 'https://viral-ad-architect-968474198722.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'one-image-ad', category: 'mkt', emoji: '🖼️',
+    name: 'One Image Ad Engine — Reclame din O Poză',
+    description: 'Încărci o singură imagine a produsului tău și AI-ul creează automat o campanie publicitară completă: multiple variante de reclamă, texte persuasive, headline-uri A/B testabile, formatele corecte pentru fiecare platformă (Facebook, Instagram, Google) și sugestii de targetare.',
+    targetAudience: 'Antreprenori solo, magazini online și marketeri care vor campanii rapide — au o poză bună de produs și au nevoie de reclame profesionale în 5 minute, nu în 5 zile.',
+    innovationReason: 'De la o singură imagine la o campanie multi-platformă completă — AI-ul nu doar editează poza, ci înțelege produsul și creează mesaje de vânzare specifice.',
+    link: 'https://one-image-ad-engine-968474198722.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'leadgenius', category: 'mkt', emoji: '🎯',
+    name: 'LeadGenius — Generare Lead-uri AI',
+    description: 'Sistem inteligent de generare și calificare lead-uri. Identifică automat potențiali clienți din surse multiple, îi evaluează după criterii personalizabile (buget, interes, urgență), îi scorează și îi prioritizează. Livrează o listă curată de prospecți calificați, gata de contactat.',
+    targetAudience: 'Echipe de vânzări B2B, agenții de marketing, brokeri imobiliari și orice afacere care are nevoie constant de clienți noi calificați fără prospectare manuală.',
+    innovationReason: 'AI care nu doar găsește lead-uri, ci le califică inteligent — știe cine este gata să cumpere și cine doar se uită, economisind ore de muncă echipei de vânzări.',
+    link: 'https://leadgenius-ai-968474198722.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'mega-seo', category: 'mkt', emoji: '🔎',
+    name: 'Mega SEO Audit Pro — Analiză SEO',
+    description: 'Audit SEO complet și automat pentru orice website. Scanează site-ul și analizează: viteza de încărcare, structura URL-urilor, meta tags, conținutul, backlink-urile, mobile-friendliness, Core Web Vitals și competiția. Generează un raport detaliat cu scor pe 100 și plan de acțiune prioritizat.',
+    targetAudience: 'Proprietari de site-uri web, magazine online și freelanceri SEO care vor să înțeleagă exact de ce site-ul lor nu apare pe prima pagină Google și ce trebuie să facă.',
+    innovationReason: 'Audit SEO cu AI care nu doar identifică probleme, ci le prioritizează după impact — știi exact ce să rezolvi PRIMA pentru rezultate maxime cu efort minim.',
+    link: 'https://mega-seo-audit-pro-961521792666.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'seo-mastermind', category: 'mkt', emoji: '🏆',
+    name: 'SEO Mastermind — Audit Avansat',
+    description: 'Versiunea enterprise a auditului SEO — analiză mult mai profundă cu: competitor intelligence, keyword gap analysis, content strategy AI, link building opportunities, technical SEO advanced și predicții de ranking. Include dashboard interactiv și rapoarte exportabile pentru echipe.',
+    targetAudience: 'Experți SEO, agenții digitale mari și companii enterprise care au nevoie de analiză SEO de nivel profesionist cu insights competitive și strategie pe termen lung.',
+    innovationReason: 'Cel mai avansat audit SEO AI — combină analiză tehnică, intelligence competitiv și strategie de conținut într-un singur instrument care rivalizează cu suite enterprise de mii de dolari.',
+    link: 'https://seo-mastermind-mega-audit-pro-765729445735.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'agent-promovator', category: 'mkt', emoji: '📢',
+    name: 'Agent Promovator — Consultant Marketing AI',
+    description: 'Consultant de marketing digital AI disponibil 24/7. Îi spui ce afacere ai, ce buget ai și ce obiective vrei, iar el îți creează o strategie completă: canale recomandate, tipuri de conținut, calendar editorial, idei de campanii, sugestii de targetare și metrici de urmărit.',
+    targetAudience: 'Antreprenori la început de drum, freelanceri și proprietari de afaceri mici care au nevoie de sfaturi de marketing profesioniste dar nu-și permit un consultant sau o agenție.',
+    innovationReason: 'Consultant marketing AI care nu dă sfaturi generice, ci strategii personalizate bazate pe industria ta, bugetul tău și obiectivele tale specifice — disponibil oricând, fără programare.',
+    link: 'https://agentpromovator-consultan-marketing-online-765729445735.us-west1.run.app/', status: 'live'
+  },
 
   // ─── ENERGIE (6) ───
-  { id: 'helios-solar', category: 'energy', emoji: '🌞', name: 'Helios Solar Intelligence', description: 'O minte sclipitoare care îți spune cât soare poți prinde pe casa ta și cum să transformi lumina în curent electric.', targetAudience: 'Proprietari de case interesați de energie solară.', innovationReason: 'Analiză solară AI cu date meteo locale.', link: '#', status: 'under-construction' },
-  { id: 'helios-simplu', category: 'energy', emoji: '⚡', name: 'Helios (Varianta Simplă)', description: 'Cel mai rapid mod de a afla dacă merită să-ți pui panouri solare. Îți dă răspunsul în câteva secunde!', targetAudience: 'Oricine curios despre panouri solare.', innovationReason: 'Calculator solar instant fără date complicate.', link: 'https://helios-765729445735.us-west1.run.app/', status: 'live' },
-  { id: 'smart-helios', category: 'energy', emoji: '🔋', name: 'Smart Helios', description: 'Un asistent care îți face planul perfect pentru panouri și baterii, ca să nu pierzi nicio rază de soare.', targetAudience: 'Proprietari care vor planificare solară detaliată.', innovationReason: 'Planificare inteligentă panouri + baterii.', link: 'https://smart-helios-765729445735.us-west1.run.app/', status: 'live' },
-  { id: 'smart-helios-dashboard', category: 'energy', emoji: '📊', name: 'Smart Helios Dashboard', description: 'Un ecran magic unde vezi în timp real cât curent produc panourile tale și câți bani economisești.', targetAudience: 'Prosumatori cu panouri solare instalate.', innovationReason: 'Monitorizare real-time producție și economii.', link: 'https://smart-helios-dashboard-765729445735.us-west1.run.app/', status: 'live' },
-  { id: 'smart-renewable', category: 'energy', emoji: '🌱', name: 'Smart Renewable (Lovable)', description: 'O aplicație prietenoasă care te învață cum să ai o casă verde și cât de mult ajuți natura prin energia curată.', targetAudience: 'Familii eco-conscious.', innovationReason: 'Educație energetică gamificată și prietenoasă.', link: 'https://smartrenewable.lovable.app/', status: 'live' },
-  { id: 'diagnostic-verde', category: 'energy', emoji: '🏗️', name: 'Diagnosticare Energie Verde', description: 'Un doctor pentru sistemele de energie regenerabilă. Găsește imediat orice problemă și spune cum se repară.', targetAudience: 'Tehnicieni și proprietari de sisteme solare.', innovationReason: 'Diagnostic AI pentru sisteme renewable.', link: 'https://smart-renewable-energy-engineering-diagnostics-968474198722.us-west1.run.app/', status: 'live' },
+  {
+    id: 'helios-solar', category: 'energy', emoji: '🌞',
+    name: 'Helios Solar Intelligence',
+    description: 'Platformă avansată de analiză solară cu AI. Calculează potențialul solar al oricărei locații folosind date meteo reale, orientarea acoperișului, umbrele din jur și tarifele locale de energie. Generează un plan complet: câte panouri ai nevoie, ce invertor, cât costă, cât economisești și în câți ani îți recuperezi investiția.',
+    targetAudience: 'Proprietari de case și companii interesate serios de panouri solare — vor o analiză detaliată și personalizată, nu doar estimări generice.',
+    innovationReason: 'Analiză solară AI cu date meteo locale în timp real, modelare 3D a umbrelor și calcul ROI cu tarife de energie actualizate — precizie de 95% vs. calculatoarele tradiționale.',
+    link: '#', status: 'under-construction'
+  },
+  {
+    id: 'helios-simplu', category: 'energy', emoji: '⚡',
+    name: 'Helios — Calculator Solar Rapid',
+    description: 'Cel mai rapid mod de a afla dacă merită panouri solare pentru tine. Răspunzi la 3-4 întrebări simple (unde locuiești, cât consumi, ce suprafață ai) și primești instant: estimare producție, economie lunară, cost estimat și payback period. Zero jargon tehnic.',
+    targetAudience: 'Oricine curios despre panouri solare dar nu vrea să se piardă în detalii tehnice — vrea un răspuns rapid: „Merită sau nu pentru mine?".',
+    innovationReason: 'Calculator solar instant care dă răspunsuri clare în 30 de secunde — fără formulare complicate, fără cont, fără așteptare. Democratizează accesul la informația solară.',
+    link: 'https://helios-765729445735.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'smart-helios', category: 'energy', emoji: '🔋',
+    name: 'Smart Helios — Planificare Inteligentă',
+    description: 'Asistent AI pentru planificarea completă a unui sistem fotovoltaic. Dimensionează optimal: panouri (tip, număr, orientare), invertor, baterii de stocare, și cablare. Ia în calcul consumul tău real, pattern-urile de consum pe ore și sezonalitate pentru a proiecta un sistem perfect adaptat nevoilor tale.',
+    targetAudience: 'Proprietari de case și firme de instalații solare care vor o planificare profesionistă și detaliată a întregului sistem fotovoltaic, optimizat pentru maximum eficiență.',
+    innovationReason: 'Planificare inteligentă care optimizează raportul cost-performanță — nu recomandă cel mai mare sistem, ci cel mai potrivit, în funcție de consumul real și obiectivele financiare.',
+    link: 'https://smart-helios-765729445735.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'smart-helios-dashboard', category: 'energy', emoji: '📊',
+    name: 'Smart Helios Dashboard — Monitorizare Live',
+    description: 'Dashboard de monitorizare în timp real pentru sisteme fotovoltaice instalate. Vezi instant: producția curentă (kW), producția zilnică/lunară (kWh), economiile financiare, consumul vs. producția, surplus-ul injectat în rețea și starea bateriilor. Grafice istorice și alerte de performanță.',
+    targetAudience: 'Prosumatori cu panouri solare deja instalate care vor să monitorizeze performanța sistemului, să urmărească economiile și să detecteze rapid orice problemă.',
+    innovationReason: 'Monitorizare real-time cu AI care detectează anomalii de performanță — dacă panourile produc sub așteptări, te alertează și sugerează cauza (murdărie, umbră, defecțiune).',
+    link: 'https://smart-helios-dashboard-765729445735.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'smart-renewable', category: 'energy', emoji: '🌱',
+    name: 'Smart Renewable — Energie Verde',
+    description: 'Aplicație educativă și interactivă despre energie regenerabilă. Explică pe înțelesul tuturor cum funcționează panourile solare, turbinele eoliene și pompele de căldură. Include calculatoare de impact ecologic, comparații de costuri și un ghid pas-cu-pas pentru tranziția la energie verde.',
+    targetAudience: 'Familii eco-conscious, elevi și studenți, și oricine vrea să înțeleagă energia regenerabilă fără jargon tehnic — și eventual să facă pasul spre o casă verde.',
+    innovationReason: 'Educație energetică gamificată — învți despre energie verde prin interacțiune, nu prin lecturi plictisitoare. Include simulări, quiz-uri și provocări eco.',
+    link: 'https://smartrenewable.lovable.app/', status: 'live'
+  },
+  {
+    id: 'diagnostic-verde', category: 'energy', emoji: '🏗️',
+    name: 'Diagnosticare Energie Verde',
+    description: 'Instrument AI de diagnosticare și troubleshooting pentru sisteme de energie regenerabilă. Descrii simptomele (producție scăzută, erori invertor, consum anormal) și AI-ul identifică cauza probabilă, sugerează soluții și estimează costul reparației. Funcționează pentru panouri solare, baterii și invertoare.',
+    targetAudience: 'Tehnicieni de instalare/mentenanță, proprietari de sisteme fotovoltaice cu probleme și firme de energie regenerabilă care vor diagnostic rapid fără deplasare pe teren.',
+    innovationReason: 'Diagnostic AI care identifică 90% din problemele comune ale sistemelor solare remote — reduce timpii de diagnostic de la ore la minute și elimină deplasările inutile.',
+    link: 'https://smart-renewable-energy-engineering-diagnostics-968474198722.us-west1.run.app/', status: 'live'
+  },
 
   // ─── OPERAȚIUNI (6) ───
-  { id: 'nexus-dashboard', category: 'ops', emoji: '🌐', name: 'Nexus Dashboard', description: 'Un ecran mare unde vezi toate cifrele afacerii tale. Știi mereu câți bani ai făcut și câți clienți ai avut.', targetAudience: 'Antreprenori care vor vizibilitate asupra KPI-urilor.', innovationReason: 'Dashboard all-in-one cu date în timp real.', link: 'https://nexus-ai-dashboard-904508730197.us-west1.run.app/', status: 'live' },
-  { id: 'nexus-2027', category: 'ops', emoji: '🚀', name: 'Nexus 2027 — Platforma Business', description: 'O platformă complexă gândită pentru viitor — automatizează procese, gestionează echipe și planifică strategic pe termen lung.', targetAudience: 'Companii în creștere cu procese complexe.', innovationReason: 'Platformă business futuristică cu AI integrat.', link: 'https://nexus-2027-business-operations-platform-968474198722.us-west1.run.app/', status: 'live' },
-  { id: 'claude-trading', category: 'ops', emoji: '📈', name: 'Claude Trading Agent', description: 'Un agent AI de investiții — urmărește piețele financiare și sugerează tranzacții inteligente. Ca un broker personal, disponibil 24/7.', targetAudience: 'Investitori și traderi care vor asistență AI.', innovationReason: 'Agent de trading AI cu analiză continuă.', link: 'https://claude-trading-agent-dashboard-968474198722.us-west1.run.app/', status: 'live' },
-  { id: 'automation-hub', category: 'ops', emoji: '⚙️', name: 'Automation Hub', description: 'Locul unde pui toate aplicațiile tale să lucreze împreună. Economisești timp pentru că ele vorbesc singure între ele.', targetAudience: 'Companii cu multiple instrumente digitale.', innovationReason: 'Hub de automatizare care conectează orice aplicație.', link: 'https://ai-automation-hub-765729445735.us-west1.run.app/', status: 'live' },
-  { id: 'greenthumb', category: 'ops', emoji: '🌿', name: 'GreenThumb AI', description: 'AI pentru agricultură și grădinărit — sfaturi despre plante, culturi, irigații și tot ce ține de spații verzi și producție agricolă.', targetAudience: 'Agricultori și pasionați de grădinărit.', innovationReason: 'Consultant AI pentru agricultură și grădinărit.', link: 'https://greenthumb-ai-968474198722.us-west1.run.app/', status: 'live' },
-  { id: 'claude-special', category: 'ops', emoji: '🔮', name: 'Proiect Special Claude AI', description: 'Un artifact public creat cu Claude AI — o demonstrație sau aplicație specială pe care oricine o poate accesa cu acest link.', targetAudience: 'Curioși și early adopters de AI.', innovationReason: 'Experiment public cu Claude AI.', link: '#', status: 'under-construction' },
+  {
+    id: 'nexus-dashboard', category: 'ops', emoji: '🌐',
+    name: 'Nexus Dashboard — Command Center',
+    description: 'Dashboard executiv all-in-one care centralizează toți KPI-urile afacerii tale într-un singur ecran. Venituri, cheltuieli, comenzi, clienți noi, retenție, satisfacție — totul actualizat în timp real cu grafice interactive. Include alarme automate când metricile deviază de la normal.',
+    targetAudience: 'CEO-i, manageri generali și antreprenori care vor vizibilitate completă asupra afacerii lor dintr-un singur ecran — fără să deschidă 10 tab-uri și 5 aplicații diferite.',
+    innovationReason: 'Dashboard AI care nu doar afișează date, ci le interpretează — evidențiază trenduri, semnalează anomalii și sugerează acțiuni bazate pe pattern-urile identificate.',
+    link: 'https://nexus-ai-dashboard-904508730197.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'nexus-2027', category: 'ops', emoji: '🚀',
+    name: 'Nexus 2027 — Platformă Business Futuristică',
+    description: 'Platformă complexă de management business gândită pentru viitor. Automatizează procese end-to-end, gestionează echipe distribuite, planifică strategic cu scenarii AI, monitorizează proiecte și optimizează resurse. Include: project management, HR lite, CRM, raportare avansată și planificare strategică.',
+    targetAudience: 'Companii în creștere rapidă cu 10-200 angajați care au procese complexe, echipe distribuite și au nevoie de o platformă unificată de management — nu 20 de SaaS-uri separate.',
+    innovationReason: 'Platformă business next-gen cu AI predictiv integrat — nu doar gestionează, ci anticipează: prevede bottleneck-uri, sugerează realocări de resurse și identifică oportunități de optimizare.',
+    link: 'https://nexus-2027-business-operations-platform-968474198722.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'claude-trading', category: 'ops', emoji: '📈',
+    name: 'Claude Trading Agent — Investiții AI',
+    description: 'Agent AI de trading și analiză financiară. Monitorizează piețele financiare 24/7, analizează acțiuni și crypto, identifică pattern-uri tehnice, evaluează sentimentul pieței și sugerează tranzacții cu raport risc/recompensă calculat. Include backtesting pe date istorice și alerte personalizabile.',
+    targetAudience: 'Investitori individuali, traderi part-time și entuziaști crypto care vor asistență AI pentru decizii de investiții mai informate — nu un „get rich quick scheme", ci analiză serioasă.',
+    innovationReason: 'Agent AI de trading cu analiză multi-layered — combină analiză tehnică, fundamentală și de sentiment în recomandări unificate cu grad de încredere și management al riscului.',
+    link: 'https://claude-trading-agent-dashboard-968474198722.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'automation-hub', category: 'ops', emoji: '⚙️',
+    name: 'Automation Hub — Conectare Servicii',
+    description: 'Hub central de automatizare care conectează toate aplicațiile și serviciile tale între ele. Creează fluxuri automate: „Când primesc o comandă pe site → trimite notificare pe WhatsApp → actualizează inventory → generează factură → trimite email de confirmare". Totul fără cod.',
+    targetAudience: 'Companii cu 5+ instrumente digitale care vor să le facă să „vorbească" între ele — eliminând copy-paste-ul manual, erorile umane și orele pierdute cu task-uri repetitive.',
+    innovationReason: 'Hub de automatizare cu AI care nu doar execută reguli, ci sugerează automatizări — analizează ce faci manual repetitiv și propune workflow-uri automate.',
+    link: 'https://ai-automation-hub-765729445735.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'greenthumb', category: 'ops', emoji: '🌿',
+    name: 'GreenThumb AI — Consultant Agricol',
+    description: 'Asistent AI pentru agricultură, grădinărit și spații verzi. Identifică plante din fotografii, diagnostichează boli, recomandă programuri de irigație, sugerează îngrășăminte și oferă sfaturi de sezon. Include calendar de plantare personalizat pe zona ta climatică și alertele meteo relevante.',
+    targetAudience: 'Agricultori, grădinari amatori, proprietari de sere și oricine are plante (de la o grădină mică la hectare de culturi) și vrea sfaturi AI personalizate.',
+    innovationReason: 'Consultant agricol AI care combină viziune computerizată (identificare plante/boli din poze) cu date meteo locale și knowledge agronomic — ca un inginer agronom disponibil 24/7.',
+    link: 'https://greenthumb-ai-968474198722.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'claude-special', category: 'ops', emoji: '🔮',
+    name: 'Proiect Special Claude AI',
+    description: 'Un proiect experimental și demonstrativ creat cu Claude AI — un artifact public care showcases capabilitățile avansate ale inteligenței artificiale. Poate fi o demonstrație interactivă, un tool experimental sau un concept inovator în curs de dezvoltare.',
+    targetAudience: 'Entuziaști AI, developeri curioși și early adopters care vor să vadă ce e posibil cu cele mai noi tehnologii AI — un spațiu de experimentare și inovație.',
+    innovationReason: 'Experiment public cu AI de ultimă generație — un spațiu de testare a ideilor îndrăznețe și conceptelor noi, accesibil oricui.',
+    link: '#', status: 'under-construction'
+  },
 
   // ─── AFACERI (6) ───
-  { id: 'alex-mercedes', category: 'biz', emoji: '🚗', name: 'Alex Mercedes', description: 'Dacă îți plac mașinile Mercedes, acesta e locul perfect. Alex te ajută să găsești mașina visurilor tale.', targetAudience: 'Pasionați de mașini Mercedes.', innovationReason: 'Platformă AI pentru selecția de Mercedes.', link: 'https://alexmercedes.online/', status: 'live' },
-  { id: 'alex-ai-mercedes', category: 'biz', emoji: '🔧', name: 'Alex AI — Expert Tehnic Mercedes', description: 'Un AI specialist în mașini Mercedes-Benz — diagnostichează probleme, răspunde la întrebări tehnice și oferă sfaturi de întreținere instant.', targetAudience: 'Proprietari de Mercedes care au nevoie de asistență tehnică.', innovationReason: 'Expert tehnic AI specializat pe Mercedes-Benz.', link: 'https://alex-ai-mercedes-technical-expert-765729445735.us-west1.run.app/', status: 'live' },
-  { id: 'mbeuroparts', category: 'biz', emoji: '🚙', name: 'MB EuroParts', description: 'Platformă pentru piese auto europene — găsești, compari și comanzi piese de schimb pentru mașini europene, ușor și rapid.', targetAudience: 'Proprietari de mașini europene și service-uri auto.', innovationReason: 'Primul marketplace AI pentru piese auto europene.', link: 'https://mbeuroparts.lovable.app/', status: 'live' },
-  { id: 'vreau-franciza', category: 'biz', emoji: '🏪', name: 'Vreau Franciză', description: 'Vrei să ai propria ta afacere MrDelivery? Completează acest formular și hai să pornim la drum împreună!', targetAudience: 'Antreprenori interesați de francize MrDelivery.', innovationReason: 'Proces de aplicare franciză complet digital.', link: 'https://mr-franchise-form.lovable.app/', status: 'live' },
-  { id: 'franchise-dream', category: 'biz', emoji: '💭', name: 'Franchise Dream Form', description: 'Ai visat să ai propria franciză? Completezi un formular simplu și primești un plan personalizat pentru a-ți transforma visul în realitate.', targetAudience: 'Viitori francizați care vor plan personalizat.', innovationReason: 'Generator AI de planuri de franciză personalizate.', link: 'https://franchise-dream-form.lovable.app/', status: 'live' },
-  { id: 'dream-formula', category: 'biz', emoji: '🧪', name: 'Dream Formula Maker', description: 'Un tool care te ajută să creezi "formula" afacerii tale de vis — combini idei, resurse și obiective pentru a construit planul perfect.', targetAudience: 'Antreprenori la început de drum.', innovationReason: 'Generator de formule de business cu AI.', link: 'https://dream-formula-maker.lovable.app/', status: 'live' },
+  {
+    id: 'alex-mercedes', category: 'biz', emoji: '🚗',
+    name: 'Alex Mercedes — Platformă Auto',
+    description: 'Platformă online pentru pasionații și cumpărătorii de Mercedes-Benz. Prezintă un portofoliu de mașini disponibile cu fotografii profesionale, specificații tehnice detaliate, istoric verificat și prețuri transparente. Include opțiune de contactare directă și programare test drive.',
+    targetAudience: 'Pasionați de mașini Mercedes-Benz, cumpărători care caută un Mercedes second-hand de calitate și colecționari auto interesați de modele specifice.',
+    innovationReason: 'Platformă dedicată exclusiv brandului Mercedes-Benz cu prezentare premium — nu un clasic autovit.ro, ci o experiență de showroom digital cu atenție la detalii.',
+    link: 'https://alexmercedes.online/', status: 'live'
+  },
+  {
+    id: 'alex-ai-mercedes', category: 'biz', emoji: '🔧',
+    name: 'Alex AI — Expert Tehnic Mercedes',
+    description: 'Asistent AI specializat exclusiv pe mașini Mercedes-Benz. Răspunde la orice întrebare tehnică: coduri de eroare, intervale de service, compatibilitate piese, probleme frecvente pe model, costuri de întreținere și sfaturi de cumpărare. Știe totul despre fiecare model Mercedes din 1990 până azi.',
+    targetAudience: 'Proprietari de Mercedes care au întrebări tehnice, mecanici auto care lucrează pe Mercedes, și cumpărători care vor să știe totul despre un model înainte de achiziție.',
+    innovationReason: 'Expert tehnic AI antrenat pe întreaga bază de cunoștințe Mercedes-Benz — coduri de eroare, TSB-uri, recall-uri, specificații pe model/an — mai complet decât majoritatea mecanicilor.',
+    link: 'https://alex-ai-mercedes-technical-expert-765729445735.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'mbeuroparts', category: 'biz', emoji: '🚙',
+    name: 'MB EuroParts — Piese Auto Europene',
+    description: 'Marketplace digital pentru piese auto europene, cu focus pe Mercedes-Benz. Cauti piesa după model, an și cod OEM, compari prețuri de la mai mulți furnizori, verifici compatibilitatea și comanzi online cu livrare la domiciliu sau la service. Include catalog complet cu imagini și specificații tehnice.',
+    targetAudience: 'Proprietari de mașini europene, service-uri auto independente, mecanici și antreprenori auto care caută piese de calitate la prețuri competitive, cu livrare rapidă.',
+    innovationReason: 'Primul marketplace AI pentru piese auto europene — căutare inteligentă care înțelege descrieri non-tehnice („piesa aia de la motor care face zgomot") și găsește piesa corectă.',
+    link: 'https://mbeuroparts.lovable.app/', status: 'live'
+  },
+  {
+    id: 'vreau-franciza', category: 'biz', emoji: '🏪',
+    name: 'Vreau Franciză — Aplicare MrDelivery',
+    description: 'Formular digital de aplicare pentru franciza MrDelivery. Completezi informații despre tine, locația dorită, experiența anterioară și bugetul disponibil. Primești imediat o evaluare automată a eligibilității și un răspuns personalizat cu pașii următori pentru a deveni francizat MrDelivery.',
+    targetAudience: 'Antreprenori din România care vor să deschidă propria franciză MrDelivery — cu sau fără experiență în HoReCa, cu un buget de investiție inițial și motivație de a construi.',
+    innovationReason: 'Proces de aplicare franciză 100% digital cu evaluare AI instantă — nu mai aștepți săptămâni pentru un răspuns, primești feedback personalizat în ore.',
+    link: 'https://mr-franchise-form.lovable.app/', status: 'live'
+  },
+  {
+    id: 'franchise-dream', category: 'biz', emoji: '💭',
+    name: 'Franchise Dream — Plan Personalizat',
+    description: 'Generator AI de planuri de franciză personalizate. Completezi un formular despre visul tău antreprenorial — ce industrie te atrage, ce buget ai, unde vrei să deschizi — și primești un plan detaliat: model de business, proiecții financiare, pași de implementare și resurse necesare.',
+    targetAudience: 'Viitori francizați care sunt încă în faza de explorare — au visul de a avea propria afacere dar nu știu exact ce model de franciză li se potrivește.',
+    innovationReason: 'Generator AI de business plans personalizate — nu template-uri generice, ci planuri adaptate pe profilul, bugetul și obiectivele fiecărui aplicant în parte.',
+    link: 'https://franchise-dream-form.lovable.app/', status: 'live'
+  },
+  {
+    id: 'dream-formula', category: 'biz', emoji: '🧪',
+    name: 'Dream Formula Maker — Blueprint Afacere',
+    description: 'Tool interactiv care te ajută să cristalizezi ideea de afacere perfectă. Combini ingredientele (pasiuni + skills + piață + buget) și AI-ul generează „formula" completă: model de business, USP, target audience, canale de vânzare, proiecții de venituri și plan de acțiune pe 90 de zile.',
+    targetAudience: 'Antreprenori la început de drum care au idei multiple dar nu știu pe care să o aleagă, și oameni cu pasiuni care vor să le transforme în afaceri viabile.',
+    innovationReason: 'Abordare unică „formula chimică" a business-ului — combini elementele și vezi ce „compus" rezultă. AI-ul testează viabilitatea ideii înainte să investești un leu.',
+    link: 'https://dream-formula-maker.lovable.app/', status: 'live'
+  },
 
   // ─── SECURITATE (4) ───
-  { id: 'cyberintel', category: 'security', emoji: '🛡️', name: 'CyberIntel Hub', description: 'Centru de informații despre securitate online — știi mereu ce amenințări există, cum te protejezi și cum îți ții afacerea în siguranță pe internet.', targetAudience: 'Business-uri care vor protecție cyber.', innovationReason: 'Hub de intelligence cyber actualizat în timp real.', link: 'https://cyberintel-hub-968474198722.us-west1.run.app/', status: 'live' },
-  { id: 'truthsignal', category: 'security', emoji: '📡', name: 'TruthSignal', description: 'Verifică dacă ce citești online este adevărat sau fals. Un detector AI de fake news — super util într-o lume plină de informații false.', targetAudience: 'Utilizatori de internet care vor informații verificate.', innovationReason: 'Detector AI de fake news și dezinformare.', link: 'https://truthsignal-765729445735.us-west1.run.app/', status: 'live' },
-  { id: 'guardian-ai', category: 'security', emoji: '🔒', name: 'Guardian AI', description: 'Un sistem de monitorizare și protecție inteligent — alertează când ceva nu e în regulă și te ajută să îți protejezi ce contează mai mult.', targetAudience: 'Familii și companii care vor securitate digitală.', innovationReason: 'Monitorizare AI proactivă cu alerte inteligente.', link: 'https://guardian-ai-968474198722.us-west1.run.app/', status: 'live' },
-  { id: 'mobile-guardian', category: 'security', emoji: '🛡️', name: 'Mobile First Guardian', description: 'Un sistem de securitate și protecție optimizat pentru mobil. În curs de dezvoltare pentru a oferi cea mai bună experiență de siguranță portabilă.', targetAudience: 'Utilizatori mobili care vor securitate on-the-go.', innovationReason: 'Securitate AI mobile-first.', link: '#', status: 'under-construction' },
+  {
+    id: 'cyberintel', category: 'security', emoji: '🛡️',
+    name: 'CyberIntel Hub — Centru Securitate',
+    description: 'Centru de intelligence și monitorizare cybersecurity. Agregă în timp real amenințări, vulnerabilități și incidente de securitate relevante pentru afacerea ta. Include: monitorizare dark web, alerte de breach, evaluare riscuri, recomandări de securizare și rapoarte periodice de compliance (GDPR, NIS2).',
+    targetAudience: 'Business-uri mici și mijlocii care procesează date sensibile (clienți, plăți, informații personale) și vor protecție cyber profesionistă fără să angajeze o echipă de securitate.',
+    innovationReason: 'Hub de intelligence cyber actualizat în timp real — nu doar te protejează reactiv, ci te alertează proactiv despre amenințări specifice industriei tale înainte să te afecteze.',
+    link: 'https://cyberintel-hub-968474198722.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'truthsignal', category: 'security', emoji: '📡',
+    name: 'TruthSignal — Detector Fake News',
+    description: 'Instrument AI de verificare a informațiilor online. Copiezi un articol, o știre sau un mesaj viral și AI-ul analizează: sursele, consistența factuală, bias-ul, limbajul manipulativ și cross-referencing-ul cu surse verificate. Primești un scor de credibilitate și explicații detaliate.',
+    targetAudience: 'Utilizatori de internet care vor să distingă între informații reale și dezinformare — jurnaliști, profesori, părinți, și oricine vrea să navigheze responsabil pe internet.',
+    innovationReason: 'Detector AI de fake news multi-layered — nu doar verifică fapte, ci analizează limbajul, structura argumentului și pattern-urile de manipulare emoțională.',
+    link: 'https://truthsignal-765729445735.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'guardian-ai', category: 'security', emoji: '🔒',
+    name: 'Guardian AI — Monitorizare & Protecție',
+    description: 'Sistem AI de monitorizare și protecție digitală continuă. Urmărește activitatea conturilor tale online, detectează acces neautorizat, monitorizează scurgeri de date, verifică puterea parolelor și alertează instant când ceva nu e în regulă. Include recomandări de securizare personalizate.',
+    targetAudience: 'Familii digitale care vor liniște sufletească, companii mici care vor protecție fără echipă IT dedicată și oricine ia serios securitatea digitală personală.',
+    innovationReason: 'Monitorizare AI proactivă 24/7 care nu așteaptă să se întâmple ceva rău — detectează comportamente suspecte și te avertizează ÎNAINTE ca un incident să devină o problemă.',
+    link: 'https://guardian-ai-968474198722.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'mobile-guardian', category: 'security', emoji: '🛡️',
+    name: 'Mobile First Guardian — Securitate Mobilă',
+    description: 'Sistem de securitate digitală optimizat complet pentru dispozitive mobile. Protecție în timp real pe telefon: detectare aplicații malițioase, securizare rețele WiFi publice, protecție împotriva phishing-ului pe SMS/WhatsApp și monitorizare permisiuni aplicații. În curs de dezvoltare.',
+    targetAudience: 'Utilizatori de smartphone care accesează date sensibile (banking, email, social media) de pe telefon și vor protecție profesionistă on-the-go, fără să încetinească telefonul.',
+    innovationReason: 'Securitate AI mobile-first care protejează acolo unde ești cel mai vulnerabil — pe telefonul personal, conectat la WiFi-uri publice, primind mesaje de phishing pe WhatsApp.',
+    link: '#', status: 'under-construction'
+  },
 
   // ─── LIFESTYLE (6) ───
-  { id: 'velvet-rose', category: 'life', emoji: '🌹', name: 'Velvet & Rose', description: 'Un loc plin de frumusețe și relaxare. Te ajută să te simți minunat și să ai grijă de tine.', targetAudience: 'Persoane care vor wellness și self-care.', innovationReason: 'Platformă de wellness cu recomandări AI.', link: 'https://velvet-and-rose.lovable.app/', status: 'live' },
-  { id: 'chalet-jolie', category: 'life', emoji: '🏔️', name: 'Chalet Jolie', description: 'Un chalet sau locație de vacanță — probabil o cazare de munte de calitate. Frumos, intim, perfect pentru un weekend de relaxare.', targetAudience: 'Turiști care caută cazare de munte premium.', innovationReason: 'Experiență de booking cu prezentare imersivă.', link: 'https://chalet-jolie.lovable.app/', status: 'live' },
-  { id: 'alza-osteria', category: 'life', emoji: '🍝', name: 'Alza Osteria', description: 'O osterie — restaurant italian autentic. Mâncare tradițională, atmosferă caldă, locul unde te simți ca în Italia fără să iei avionul.', targetAudience: 'Iubitori de bucătărie italiană autentică.', innovationReason: 'Website restaurant cu experiență digitală premium.', link: 'https://alzaosteria.lovable.app/', status: 'live' },
-  { id: 'heart-echo', category: 'life', emoji: '❤️', name: 'Heart Echo', description: 'Te ajută să scrii mesaje frumoase și pline de iubire pentru cei dragi, atunci când nu găsești cuvintele.', targetAudience: 'Persoane romantice care vor mesaje de impact.', innovationReason: 'Generator AI de mesaje emoționale personalizate.', link: 'https://heart-echo-maker.lovable.app/', status: 'live' },
-  { id: 'anchor', category: 'life', emoji: '🔗', name: 'Anchor — Relații Importante', description: 'Un AI care te ajută să îngrijești relațiile importante din viața ta — cu parteneri, prieteni sau colegi. Îți amintește, îți sugerează, te ajută să fii prezent.', targetAudience: 'Persoane care vor relații mai sănătoase.', innovationReason: 'AI relațional care îmbunătățește conexiunile umane.', link: 'https://anchor-relationship-guardian-765729445735.us-west1.run.app/', status: 'live' },
-  { id: 'lifekit', category: 'life', emoji: '💚', name: 'LifeKit', description: 'Un kit complet pentru o viață mai bună — tool-uri, sfaturi și resurse pentru sănătate, productivitate și bunăstare personală.', targetAudience: 'Oricine vrea să-și îmbunătățească viața.', innovationReason: 'Kit all-in-one pentru dezvoltare personală cu AI.', link: 'https://lifekit-968474198722.us-west1.run.app/', status: 'live' },
+  {
+    id: 'velvet-rose', category: 'life', emoji: '🌹',
+    name: 'Velvet & Rose — Wellness & Beauty',
+    description: 'Platformă digitală de wellness și self-care cu recomandări AI personalizate. Include rutine de îngrijire a pielii adaptate pe tipul tău, sugestii de produse de beauty, meditații ghidate, exerciții de relaxare și un jurnal de bunăstare. Totul într-un ambalaj vizual elegant și luxos.',
+    targetAudience: 'Femei și bărbați care vor să investească în bunăstarea lor personală — de la skincare personalizat la mindfulness, totul într-o singură aplicație elegantă.',
+    innovationReason: 'Platformă de wellness cu AI care personalizează totul — de la rutina de dimineață la produsele recomandate, bazat pe tipul de piele, stilul de viață și obiectivele tale.',
+    link: 'https://velvet-and-rose.lovable.app/', status: 'live'
+  },
+  {
+    id: 'chalet-jolie', category: 'life', emoji: '🏔️',
+    name: 'Chalet Jolie — Cazare Premium',
+    description: 'Website de prezentare pentru o locație de cazare de munte premium. Galerie foto imersivă, descrieri detaliate ale camerelor și facilităților, calendar de disponibilitate, prețuri transparente și sistem de rezervare direct. Experiență vizuală care te transportă la munte înainte să ajungi acolo.',
+    targetAudience: 'Turiști care caută o cazare de munte de calitate superioară — pentru un weekend romantic, o vacanță cu familia sau un retreat de relaxare în natură.',
+    innovationReason: 'Experiență de booking cu prezentare imersivă — fotografii cinematice, tur virtual și descrieri care vând emoția, nu doar camera. Rezervare directă fără comision de platformă.',
+    link: 'https://chalet-jolie.lovable.app/', status: 'live'
+  },
+  {
+    id: 'alza-osteria', category: 'life', emoji: '🍝',
+    name: 'Alza Osteria — Restaurant Italian',
+    description: 'Website elegant pentru un restaurant italian autentic. Prezintă meniul complet cu descrieri poetice, povestea restaurantului, galerie foto atmosferică, orar și locație, sistem de rezervări online și secțiune de evenimente speciale. Te face să simți aroma bucătăriei italiene doar privind.',
+    targetAudience: 'Iubitori de bucătărie italiană autentică, cupluri care caută un restaurant romantic, grupuri de prieteni și familii care apreciază mâncarea tradițională preparată cu pasiune.',
+    innovationReason: 'Website restaurant cu experiență digitală premium — nu doar un meniu PDF online, ci o experiență senzorială completă cu storytelling culinar și atmosferă vizuală.',
+    link: 'https://alzaosteria.lovable.app/', status: 'live'
+  },
+  {
+    id: 'heart-echo', category: 'life', emoji: '❤️',
+    name: 'Heart Echo — Mesaje de Suflet',
+    description: 'Generator AI de mesaje emoționale personalizate. Spui pentru cine e mesajul (partener, părinte, prieten), ce ocazie e (aniversare, mulțumire, reconciliere) și ce vrei să exprimi, iar AI-ul creează un mesaj sincer, emoționant și unic. Nu mesaje copy-paste, ci cuvinte care ating inima.',
+    targetAudience: 'Persoane romantice, oameni care simt mult dar se exprimă greu în scris, și oricine vrea să trimită un mesaj care contează — nu un „La mulți ani" generic.',
+    innovationReason: 'Generator AI de mesaje emoționale care nu sună ca un robot — folosește psihologia emoțiilor, metafore personale și tonul potrivit pentru fiecare relație.',
+    link: 'https://heart-echo-maker.lovable.app/', status: 'live'
+  },
+  {
+    id: 'anchor', category: 'life', emoji: '🔗',
+    name: 'Anchor — Guardian al Relațiilor',
+    description: 'AI relațional care te ajută să îngrijești relațiile importante din viața ta. Îți amintește aniversări și momente importante, sugerează activități de quality time, oferă sfaturi de comunicare bazate pe tipologia relației și te ajută să fii mai prezent și atent cu oamenii care contează.',
+    targetAudience: 'Persoane care vor relații mai sănătoase și mai profunde — cu partenerul, familia, prietenii sau colegii. Oameni ocupați care nu vor să uite ce contează cu adevărat.',
+    innovationReason: 'Primul AI relațional care nu doar memorează date, ci înțelege dinamica relațiilor — detectează semnale de distanțare și sugerează acțiuni concrete de reconectare.',
+    link: 'https://anchor-relationship-guardian-765729445735.us-west1.run.app/', status: 'live'
+  },
+  {
+    id: 'lifekit', category: 'life', emoji: '💚',
+    name: 'LifeKit — Kit pentru o Viață Mai Bună',
+    description: 'Colecție completă de instrumente AI pentru dezvoltare personală. Include: tracker de obiceiuri, jurnal de recunoștință, planificator de obiective, meditații ghidate, sfaturi de nutriție, exerciții de mindfulness și coach AI personal care te cunoaște și te motivează. Totul într-un singur loc.',
+    targetAudience: 'Oricine vrea să-și îmbunătățească viața — de la productivitate la sănătate mentală, de la obiceiuri bune la obiective pe termen lung. Funcționează pentru începători și avansați.',
+    innovationReason: 'Kit all-in-one cu AI care conectează toate aspectele vieții — vede cum somnul îți afectează productivitatea, cum stresul îți afectează obiceiurile alimentare și sugerează ajustări holistic.',
+    link: 'https://lifekit-968474198722.us-west1.run.app/', status: 'live'
+  },
 ];

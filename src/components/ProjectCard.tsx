@@ -29,35 +29,35 @@ const ProjectCard = ({ project, onOpenPreview }: ProjectCardProps) => {
       whileHover={{ y: -8, scale: 1.01 }}
       whileTap={{ scale: 0.98 }}
       onClick={() => onOpenPreview(project)}
-      className="bg-hub-card border border-white/10 rounded-xl overflow-hidden cursor-pointer transition-colors hover:border-indigo-500/30 group"
+      className="bg-hub-card border border-white/10 rounded-xl lg:rounded-2xl overflow-hidden cursor-pointer transition-colors hover:border-indigo-500/30 group"
     >
       <div className={`h-[3px] bg-gradient-to-r ${borderColors[project.category] || 'from-indigo-500 to-cyan-500'}`} />
-      <div className="p-4 sm:p-5">
-        <div className="text-2xl mb-2 sm:mb-3">{project.emoji}</div>
-        <h3 className="font-bold text-hub-text text-base leading-snug mb-1.5 sm:mb-2">{project.name}</h3>
-        <p className="text-[13px] sm:text-sm leading-relaxed text-hub-muted group-hover:text-hub-secondary transition-colors mb-3 sm:mb-4 line-clamp-2">{project.description}</p>
+      <div className="p-4 sm:p-5 lg:p-6">
+        <div className="text-2xl lg:text-3xl mb-2 sm:mb-3">{project.emoji}</div>
+        <h3 className="font-bold text-hub-text text-base lg:text-lg leading-snug mb-1.5 sm:mb-2">{project.name}</h3>
+        <p className="text-[13px] sm:text-sm lg:text-base leading-relaxed text-hub-muted group-hover:text-hub-secondary transition-colors mb-3 sm:mb-4 line-clamp-2">{project.description}</p>
         <div className="flex items-center justify-between gap-2">
           {project.status === 'live' && (
-            <span className="flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <span className="flex items-center gap-1.5 text-xs lg:text-sm px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
               {t.live}
             </span>
           )}
           {project.status === 'demo' && (
-            <span className="text-xs px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">DEMO</span>
+            <span className="text-xs lg:text-sm px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">DEMO</span>
           )}
           {project.status === 'under-construction' && (
-            <span className="text-xs px-2.5 py-1 rounded-full bg-white/5 text-hub-muted border border-white/10">{t.underConstruction}</span>
+            <span className="text-xs lg:text-sm px-2.5 py-1 rounded-full bg-white/5 text-hub-muted border border-white/10">{t.underConstruction}</span>
           )}
           {project.status !== 'under-construction' ? (
             <button
               onClick={(e) => { e.stopPropagation(); window.open(project.link, '_blank'); }}
-              className={`text-xs px-3 py-1.5 rounded-lg text-white ${btnColors[project.category] || 'bg-indigo-600'} transition-colors active:scale-95`}
+              className={`text-xs lg:text-sm px-3 lg:px-4 py-1.5 lg:py-2 rounded-lg text-white ${btnColors[project.category] || 'bg-indigo-600'} transition-colors active:scale-95`}
             >
               {t.viewProject}
             </button>
           ) : (
-            <span className="text-xs text-hub-muted px-3 py-1.5">{t.underConstruction}</span>
+            <span className="text-xs lg:text-sm text-hub-muted px-3 py-1.5">{t.underConstruction}</span>
           )}
         </div>
       </div>

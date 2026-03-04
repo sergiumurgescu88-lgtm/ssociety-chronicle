@@ -27,8 +27,8 @@ const WhatsAppCTA = () => {
               {t.humanBot}
             </span>
           </div>
-          <p className="text-sm text-hub-muted mb-2">{t.whatsappBody}</p>
-          <p className="text-xs text-[#25D366]/60 mb-6">{t.whatsappTagline}</p>
+          <p className="text-sm text-hub-muted mb-3">{t.whatsappBody}</p>
+          <p className="text-xs text-[#25D366] mb-6 flex items-center gap-2"><span className="w-1.5 h-1.5 rounded-full bg-[#25D366]" />{t.whatsappTagline}</p>
           <a
             href="https://wa.me/40768676141"
             target="_blank"

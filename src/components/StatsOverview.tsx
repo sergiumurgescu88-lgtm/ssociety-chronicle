@@ -15,10 +15,10 @@ const StatsOverview = () => {
   const catCount = categories.length - 1;
 
   const stats = [
-    { icon: Rocket, value: total, label: t.statsTotal, color: 'text-white', desc: t.statsTotalDesc },
-    { icon: Activity, value: active, label: t.statsActive, color: 'text-emerald-400', desc: t.statsActiveDesc },
-    { icon: Hammer, value: inProgress, label: t.statsWork, color: 'text-amber-400', desc: t.statsWorkDesc },
-    { icon: Layers, value: catCount, label: t.statsCategories, color: 'text-indigo-400', desc: t.statsCategoriesDesc },
+    { icon: Rocket, value: total, label: t.statsTotal, sublabel: t.projects, color: 'text-white', desc: t.statsTotalDesc },
+    { icon: Activity, value: active, label: t.statsActive, sublabel: t.live, color: 'text-emerald-400', desc: t.statsActiveDesc },
+    { icon: Hammer, value: inProgress, label: t.statsWork, sublabel: t.statsWork, color: 'text-amber-400', desc: t.statsWorkDesc },
+    { icon: Layers, value: catCount, label: t.statsCategories, sublabel: t.projects, color: 'text-indigo-400', desc: t.statsCategoriesDesc },
   ];
 
   return (
@@ -35,12 +35,15 @@ const StatsOverview = () => {
             onClick={() => setExpanded(expanded === i ? null : i)}
             className="bg-hub-card border border-white/10 rounded-xl p-5 cursor-pointer hover:border-indigo-500/30 transition-colors"
           >
-            <s.icon className={`w-6 h-6 ${s.color} mb-3`} />
-            <div className={`text-3xl font-extrabold ${s.color}`}>{s.value}</div>
-            <div className="text-sm text-hub-muted mt-1 flex items-center justify-between">
-              {s.label}
-              <ChevronDown className={`w-4 h-4 transition-transform ${expanded === i ? 'rotate-180' : ''}`} />
+            <div className="flex items-center justify-between mb-1">
+              <div className="flex items-center gap-2">
+                <s.icon className={`w-4 h-4 ${s.color}`} />
+                <span className="text-xs text-hub-muted uppercase tracking-wider font-medium">{s.label}</span>
+              </div>
+              <ChevronDown className={`w-4 h-4 text-hub-muted transition-transform ${expanded === i ? 'rotate-180' : ''}`} />
             </div>
+            <div className={`text-4xl font-extrabold ${s.color} mb-1`}>{s.value}</div>
+            <div className="text-sm text-hub-muted">{s.sublabel}</div>
             <AnimatePresence>
               {expanded === i && (
                 <motion.p

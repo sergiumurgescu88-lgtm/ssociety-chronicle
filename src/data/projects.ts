@@ -284,14 +284,6 @@ export const projects: Project[] = [
     innovationReason: 'Cel mai avansat audit SEO AI — combină analiză tehnică, intelligence competitiv și strategie de conținut într-un singur instrument care rivalizează cu suite enterprise de mii de dolari.',
     link: 'https://seo-mastermind-mega-audit-pro-765729445735.us-west1.run.app/', status: 'live'
   },
-  {
-    id: 'agent-promovator', category: 'mkt', emoji: '📢',
-    name: 'Agent Promovator — Consultant Marketing AI',
-    description: 'Consultant de marketing digital AI disponibil 24/7. Îi spui ce afacere ai, ce buget ai și ce obiective vrei, iar el îți creează o strategie completă: canale recomandate, tipuri de conținut, calendar editorial, idei de campanii, sugestii de targetare și metrici de urmărit.',
-    targetAudience: 'Antreprenori la început de drum, freelanceri și proprietari de afaceri mici care au nevoie de sfaturi de marketing profesioniste dar nu-și permit un consultant sau o agenție.',
-    innovationReason: 'Consultant marketing AI care nu dă sfaturi generice, ci strategii personalizate bazate pe industria ta, bugetul tău și obiectivele tale specifice — disponibil oricând, fără programare.',
-    link: 'https://agentpromovator-consultan-marketing-online-765729445735.us-west1.run.app/', status: 'live'
-  },
 
   // ─── ENERGIE (6) ───
   {

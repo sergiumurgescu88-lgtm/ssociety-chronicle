@@ -34,12 +34,9 @@ const WildBotSection = () => {
             <p className="text-hub-muted mb-8">{t.wildBotSubtitle}</p>
 
             <div className="aspect-video rounded-2xl overflow-hidden bg-black/50 border border-white/5 mb-6">
-              <iframe
-                src="https://drive.google.com/file/d/1i3WW5jxT9TL-NzcpK7AmmO5DFSL93XZN/preview"
-                className="w-full h-full"
-                allow="autoplay"
-                title="WildBot Demo"
-              />
+              <video className="w-full h-full object-cover" controls muted loop playsInline>
+                <source src="/videos/wildbot-demo.mp4" type="video/mp4" />
+              </video>
             </div>
 
             <a

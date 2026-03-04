@@ -32,11 +32,11 @@ const ProjectCard = ({ project, onOpenPreview }: ProjectCardProps) => {
       className="bg-hub-card border border-white/10 rounded-xl overflow-hidden cursor-pointer transition-colors hover:border-indigo-500/30 group"
     >
       <div className={`h-[3px] bg-gradient-to-r ${borderColors[project.category] || 'from-indigo-500 to-cyan-500'}`} />
-      <div className="p-5">
-        <div className="text-2xl mb-3">{project.emoji}</div>
-        <h3 className="font-bold text-hub-text mb-2">{project.name}</h3>
-        <p className="text-sm text-hub-muted group-hover:text-hub-secondary transition-colors mb-4 line-clamp-2">{project.description}</p>
-        <div className="flex items-center justify-between">
+      <div className="p-4 sm:p-5">
+        <div className="text-2xl mb-2 sm:mb-3">{project.emoji}</div>
+        <h3 className="font-bold text-hub-text text-base leading-snug mb-1.5 sm:mb-2">{project.name}</h3>
+        <p className="text-[13px] sm:text-sm leading-relaxed text-hub-muted group-hover:text-hub-secondary transition-colors mb-3 sm:mb-4 line-clamp-2">{project.description}</p>
+        <div className="flex items-center justify-between gap-2">
           {project.status === 'live' && (
             <span className="flex items-center gap-1.5 text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
@@ -52,7 +52,7 @@ const ProjectCard = ({ project, onOpenPreview }: ProjectCardProps) => {
           {project.status !== 'under-construction' ? (
             <button
               onClick={(e) => { e.stopPropagation(); window.open(project.link, '_blank'); }}
-              className={`text-xs px-3 py-1.5 rounded-lg text-white ${btnColors[project.category] || 'bg-indigo-600'} transition-colors`}
+              className={`text-xs px-3 py-1.5 rounded-lg text-white ${btnColors[project.category] || 'bg-indigo-600'} transition-colors active:scale-95`}
             >
               {t.viewProject}
             </button>

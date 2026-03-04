@@ -22,18 +22,18 @@ const NewsletterSection = () => {
   return (
     <motion.section
       initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-      className="max-w-4xl mx-auto px-4 py-16"
+      className="max-w-4xl mx-auto px-3 sm:px-4 py-12 sm:py-16"
     >
-      <div className="relative bg-gradient-to-br from-indigo-600/20 to-cyan-600/20 border border-indigo-500/30 rounded-[2.5rem] p-8 lg:p-12 overflow-hidden text-center">
+      <div className="relative bg-gradient-to-br from-indigo-600/20 to-cyan-600/20 border border-indigo-500/30 rounded-2xl sm:rounded-[2.5rem] p-6 sm:p-8 lg:p-12 overflow-hidden text-center">
         <div className="absolute -top-20 -left-20 w-60 h-60 bg-indigo-500/10 rounded-full blur-[80px]" />
         <div className="absolute -bottom-20 -right-20 w-60 h-60 bg-cyan-500/10 rounded-full blur-[80px]" />
 
         <div className="relative">
-          <div className="w-14 h-14 mx-auto rounded-2xl bg-white/10 backdrop-blur flex items-center justify-center mb-6">
-            <Sparkles className="w-7 h-7 text-indigo-400" />
+          <div className="w-12 h-12 sm:w-14 sm:h-14 mx-auto rounded-2xl bg-white/10 backdrop-blur flex items-center justify-center mb-5 sm:mb-6">
+            <Sparkles className="w-6 h-6 sm:w-7 sm:h-7 text-indigo-400" />
           </div>
-          <h2 className="text-2xl lg:text-3xl font-extrabold text-hub-text mb-3">{t.freeAccessTitle}</h2>
-          <p className="text-hub-muted mb-8 max-w-lg mx-auto">{t.freeAccessSubtitle}</p>
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-hub-text mb-2 sm:mb-3 leading-tight">{t.freeAccessTitle}</h2>
+          <p className="text-hub-muted text-[13px] sm:text-base mb-6 sm:mb-8 max-w-lg mx-auto leading-relaxed">{t.freeAccessSubtitle}</p>
 
           {!success ? (
             <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
@@ -51,7 +51,7 @@ const NewsletterSection = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="px-6 py-3 rounded-xl bg-white text-black font-semibold hover:bg-indigo-400 hover:text-white transition-colors text-sm disabled:opacity-50"
+                className="px-6 py-3 rounded-xl bg-white text-black font-semibold hover:bg-indigo-400 hover:text-white transition-colors text-sm disabled:opacity-50 active:scale-[0.98]"
               >
                 {loading ? '...' : t.subscribeButton}
               </button>
@@ -59,7 +59,7 @@ const NewsletterSection = () => {
           ) : (
             <div className="flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 max-w-md mx-auto">
               <CheckCircle2 className="w-5 h-5" />
-              <span className="font-medium">{t.successSubscribe}</span>
+              <span className="font-medium text-sm sm:text-base">{t.successSubscribe}</span>
             </div>
           )}
         </div>

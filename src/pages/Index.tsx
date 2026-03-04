@@ -73,19 +73,19 @@ const Index = () => {
         <WhatsAppCTA />
 
         {/* Mini stats */}
-        <div className="max-w-2xl mx-auto px-3 sm:px-4 pb-6 sm:pb-8">
-          <div className="grid grid-cols-3 gap-2 sm:gap-4 text-center">
-            <div className="p-3 sm:p-4 rounded-xl bg-hub-card border border-white/10">
-              <div className="text-xl sm:text-2xl font-extrabold text-hub-text">{projects.length}</div>
-              <div className="text-[10px] sm:text-xs text-hub-muted">{t.projects}</div>
+        <div className="max-w-2xl lg:max-w-3xl mx-auto px-3 sm:px-4 pb-6 sm:pb-8 lg:pb-12">
+          <div className="grid grid-cols-3 gap-2 sm:gap-4 lg:gap-6 text-center">
+            <div className="p-3 sm:p-4 lg:p-6 rounded-xl lg:rounded-2xl bg-hub-card border border-white/10">
+              <div className="text-xl sm:text-2xl lg:text-4xl font-extrabold text-hub-text">{projects.length}</div>
+              <div className="text-[10px] sm:text-xs lg:text-sm text-hub-muted mt-1">{t.projects}</div>
             </div>
-            <div className="p-3 sm:p-4 rounded-xl bg-hub-card border border-white/10">
-              <div className="text-xl sm:text-2xl font-extrabold text-hub-text">{categories.length - 1}</div>
-              <div className="text-[10px] sm:text-xs text-hub-muted">{t.domains}</div>
+            <div className="p-3 sm:p-4 lg:p-6 rounded-xl lg:rounded-2xl bg-hub-card border border-white/10">
+              <div className="text-xl sm:text-2xl lg:text-4xl font-extrabold text-hub-text">{categories.length - 1}</div>
+              <div className="text-[10px] sm:text-xs lg:text-sm text-hub-muted mt-1">{t.domains}</div>
             </div>
-            <div className="p-3 sm:p-4 rounded-xl bg-hub-card border border-white/10">
-              <div className="text-xl sm:text-2xl font-extrabold text-emerald-400">100%</div>
-              <div className="text-[10px] sm:text-xs text-hub-muted">{t.live}</div>
+            <div className="p-3 sm:p-4 lg:p-6 rounded-xl lg:rounded-2xl bg-hub-card border border-white/10">
+              <div className="text-xl sm:text-2xl lg:text-4xl font-extrabold text-emerald-400">100%</div>
+              <div className="text-[10px] sm:text-xs lg:text-sm text-hub-muted mt-1">{t.live}</div>
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@ const Index = () => {
               <button
                 key={s.key}
                 onClick={() => setStatusFilter(s.key)}
-                className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors min-h-[38px] ${
+                className={`px-3 sm:px-4 lg:px-5 py-2 lg:py-2.5 rounded-full text-xs sm:text-sm lg:text-base font-medium transition-colors min-h-[38px] ${
                   statusFilter === s.key
                     ? 'bg-indigo-600 text-white'
                     : 'bg-white/5 text-hub-muted hover:text-hub-text border border-white/10'
@@ -116,18 +116,18 @@ const Index = () => {
           </div>
         </div>
 
-        {/* Projects grid grouped by category */}
-        <div className="max-w-7xl mx-auto px-3 sm:px-4 pb-12 sm:pb-16">
+        {/* Projects grid */}
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 pb-12 sm:pb-16 lg:pb-20">
           <AnimatePresence mode="wait">
             <motion.div key={`${activeCategory}-${statusFilter}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
               {displayedCategories.map(cat => {
                 const catProjects = filtered.filter(p => p.category === cat.id);
                 if (catProjects.length === 0) return null;
                 return (
-                  <div key={cat.id} className="mb-8 sm:mb-12">
+                  <div key={cat.id} className="mb-8 sm:mb-12 lg:mb-16">
                     <SectionHeader category={cat} count={catProjects.length} />
                     <motion.div
-                      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5"
+                      className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 lg:gap-6"
                       variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
                       initial="hidden"
                       animate="visible"

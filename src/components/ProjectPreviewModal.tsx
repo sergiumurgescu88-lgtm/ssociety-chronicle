@@ -61,7 +61,7 @@ const ProjectPreviewModal = ({ project, onClose }: ProjectPreviewModalProps) => 
 
             {/* Info panel */}
             <div className="w-full lg:w-[440px] p-6 sm:p-8 lg:p-10 overflow-y-auto border-t lg:border-t-0 lg:border-l border-white/10">
-              <div className="text-4xl sm:text-5xl lg:text-6xl mb-3">{p.emoji}</div>
+              <div className="text-4xl sm:text-5xl lg:text-6xl mb-3">{project.emoji}</div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-hub-text mb-3 leading-tight">{p.name}</h2>
 
               <div className="flex gap-2 mb-5 lg:mb-6">

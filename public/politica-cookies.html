@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politică Cookies — SSociety HUB</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --border: #1e1e2e;
+    --accent: #c9a84c;
+    --accent-light: #e8c96d;
+    --text: #e8e8f0;
+    --muted: #8888a8;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    min-height: 100vh;
+  }
+
+  /* Header */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 28px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: rgba(10,10,15,0.95);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .logo span { color: var(--accent); }
+
+  .back-link {
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    padding: 8px 20px;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .back-link:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Hero */
+  .hero {
+    padding: 80px 48px 60px;
+    max-width: 860px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 5px 14px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .meta {
+    font-size: 0.85rem;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* Content */
+  .content {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 60px 48px 100px;
+  }
+
+  .company-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 28px 32px;
+    margin-bottom: 52px;
+    border-radius: 2px;
+  }
+
+  .company-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: var(--accent);
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+  }
+
+  .company-card table { width: 100%; border-collapse: collapse; }
+  .company-card td {
+    padding: 7px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .company-card td:first-child { color: var(--muted); width: 42%; font-size: 0.82rem; letter-spacing: 0.04em; }
+  .company-card td:last-child { color: var(--text); font-weight: 500; }
+  .company-card tr:last-child td { border-bottom: none; }
+
+  section { margin-bottom: 48px; }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    color: var(--white);
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  h2 .num {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    color: var(--accent);
+    background: rgba(201,168,76,0.1);
+    padding: 3px 10px;
+    border-radius: 2px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+
+  p { margin-bottom: 14px; font-size: 0.95rem; color: #c8c8d8; }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--text);
+    margin: 24px 0 10px;
+  }
+
+  .cookie-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.88rem;
+  }
+
+  .cookie-table th {
+    background: var(--surface);
+    color: var(--accent);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cookie-table td {
+    padding: 11px 16px;
+    border-bottom: 1px solid var(--border);
+    color: #c8c8d8;
+    vertical-align: top;
+  }
+
+  .cookie-table tr:hover td { background: rgba(201,168,76,0.03); }
+
+  .badge {
+    display: inline-block;
+    font-size: 0.72rem;
+    padding: 2px 9px;
+    border-radius: 2px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+  .badge-required { background: rgba(201,168,76,0.15); color: var(--accent); }
+  .badge-analytics { background: rgba(100,149,237,0.15); color: #7ab0f5; }
+  .badge-marketing { background: rgba(180,90,120,0.15); color: #e899b8; }
+  .badge-functional { background: rgba(90,180,120,0.15); color: #7fe0a0; }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  ul { padding-left: 20px; margin-bottom: 14px; }
+  ul li { font-size: 0.95rem; color: #c8c8d8; margin-bottom: 6px; }
+
+  /* Cookie Banner */
+  .cookie-banner {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: rgba(10,10,15,0.97);
+    border-top: 1px solid var(--border);
+    padding: 24px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    z-index: 999;
+    backdrop-filter: blur(16px);
+    transform: translateY(100%);
+    animation: slideUp 0.4s 0.8s ease forwards;
+  }
+
+  @keyframes slideUp { to { transform: translateY(0); } }
+
+  .cookie-banner p { margin: 0; font-size: 0.88rem; color: var(--muted); max-width: 600px; }
+  .cookie-banner p a { color: var(--accent); }
+
+  .banner-actions { display: flex; gap: 12px; flex-shrink: 0; }
+
+  .btn {
+    padding: 10px 24px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.2s;
+    font-weight: 500;
+  }
+
+  .btn-accept {
+    background: var(--accent);
+    color: #0a0a0f;
+    border: none;
+  }
+  .btn-accept:hover { background: var(--accent-light); }
+
+  .btn-reject {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  .btn-reject:hover { border-color: var(--muted); color: var(--text); }
+
+  .btn-settings {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+  }
+  .btn-settings:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 48px;
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  @media (max-width: 640px) {
+    header, .hero, .content { padding-left: 20px; padding-right: 20px; }
+    .cookie-banner { flex-direction: column; align-items: flex-start; padding: 20px; }
+    .banner-actions { flex-wrap: wrap; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#" class="logo">SSociety<span>HUB</span></a>
+  <a href="#" class="back-link">← Înapoi</a>
+</header>
+
+<div class="hero">
+  <div class="tag">Legal · Transparență</div>
+  <h1>Politică de Utilizare a Cookie-urilor</h1>
+  <p class="meta">Ultima actualizare: 05 Martie 2026 &nbsp;·&nbsp; Se aplică cetățenilor SEE și României</p>
+</div>
+
+<div class="content">
+
+  <div class="company-card">
+    <h3>Operator de date</h3>
+    <table>
+      <tr><td>Denumire firmă</td><td>MURSE ADVERTISING S.R.L.</td></tr>
+      <tr><td>CUI</td><td>44923890</td></tr>
+      <tr><td>Nr. Înmatriculare</td><td>J40/16148/2021</td></tr>
+      <tr><td>EUID</td><td>ROONRC.J40/16148/2021</td></tr>
+      <tr><td>Data înființării</td><td>17 septembrie 2021</td></tr>
+      <tr><td>Website</td><td><a href="#">ssocietyhub.ro</a></td></tr>
+      <tr><td>Contact</td><td><a href="mailto:contact@ssocietyhub.ro">contact@ssocietyhub.ro</a></td></tr>
+    </table>
+  </div>
+
+  <section>
+    <h2><span class="num">01</span> Introducere</h2>
+    <p>Site-ul nostru <strong>ssocietyhub.ro</strong> (denumit în continuare „site-ul") folosește cookie-uri și alte tehnologii similare. Cookie-urile sunt plasate atât de noi, cât și de terții cu care colaborăm. Prin utilizarea acestui site, ești informat cu privire la modul în care utilizăm cookie-urile și despre drepturile tale.</p>
+    <p>Această politică a fost redactată în conformitate cu <strong>Regulamentul (UE) 2016/679 (GDPR)</strong>, <strong>Legea nr. 506/2004</strong> privind prelucrarea datelor cu caracter personal în sectorul comunicațiilor electronice și <strong>Legea nr. 677/2001</strong>.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span> Ce sunt cookie-urile?</h2>
+    <p>Un cookie este un fișier de mici dimensiuni trimis împreună cu paginile acestui site și stocat de browserul tău pe hard diskul computerului sau al altui dispozitiv. Informațiile stocate pot fi trimise înapoi serverelor noastre sau serverelor terților în cadrul vizitelor ulterioare.</p>
+    <p>Un <strong>script</strong> este un fragment de cod utilizat pentru ca site-ul nostru să funcționeze corect și interactiv — executat pe serverul nostru sau pe dispozitivul tău.</p>
+    <p>Un <strong>web beacon</strong> (pixel tag) este un mic fragment invizibil de text sau imagine încorporat pe site, utilizat pentru monitorizarea traficului pe un site web.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span> Ce tipuri de cookie-uri folosim?</h2>
+
+    <table class="cookie-table">
+      <thead>
+        <tr>
+          <th>Tip</th>
+          <th>Denumire</th>
+          <th>Scop</th>
+          <th>Durată</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="badge badge-required">Necesare</span></td>
+          <td>session_id, csrf_token</td>
+          <td>Funcționarea de bază a site-ului, securitate</td>
+          <td>Sesiune</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-functional">Funcționale</span></td>
+          <td>lang_pref, ui_settings</td>
+          <td>Reținerea preferințelor tale (limbă, teme)</td>
+          <td>12 luni</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-analytics">Analiză</span></td>
+          <td>_ga, _gid (Google Analytics)</td>
+          <td>Statistici de vizitare anonime</td>
+          <td>24 luni</td>
+        </tr>
+        <tr>
+          <td><span class="badge badge-marketing">Marketing</span></td>
+          <td>_fbp, ads_session</td>
+          <td>Publicitate personalizată, retargeting</td>
+          <td>90 zile</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Cookie-uri strict necesare</h3>
+    <p>Aceste cookie-uri sunt indispensabile pentru funcționarea site-ului. Fără ele, unele funcționalități nu ar fi disponibile. Nu necesită consimțământul tău.</p>
+
+    <h3>Cookie-uri funcționale</h3>
+    <p>Permit site-ului să rețină alegerile pe care le-ai făcut (preferințe de interfață, limbă) pentru o experiență mai bună. Necesită consimțământ.</p>
+
+    <h3>Cookie-uri de analiză și performanță</h3>
+    <p>Ne ajută să înțelegem cum interacționezi cu site-ul, colectând informații anonime și agregate. Folosim Google Analytics 4 cu IP anonymization activat.</p>
+
+    <h3>Cookie-uri de marketing</h3>
+    <p>Sunt utilizate pentru a-ți afișa reclame relevante pe alte site-uri web. Pot fi plasate de parteneri de publicitate (Meta Ads, Google Ads). Necesită consimțământ explicit.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span> Cookie-uri plasate de terți</h2>
+    <p>Colaborăm cu următorii furnizori terți care pot plasa cookie-uri pe dispozitivul tău:</p>
+    <ul>
+      <li><strong>Google LLC</strong> — Google Analytics, Google Ads (politica de confidențialitate: <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>)</li>
+      <li><strong>Meta Platforms Inc.</strong> — Facebook Pixel (politica: <a href="https://www.facebook.com/policy" target="_blank">facebook.com/policy</a>)</li>
+      <li><strong>Cloudflare Inc.</strong> — securitate și performanță</li>
+    </ul>
+    <p>Nu avem control asupra cookie-urilor plasate de terți. Îți recomandăm să consulți politicile lor de confidențialitate.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span> Consimțământ și control</h2>
+    <p>La prima vizitare a site-ului, îți vom solicita consimțământul pentru cookie-urile care nu sunt strict necesare. Îți poți gestiona preferințele în orice moment prin:</p>
+    <ul>
+      <li>Bannerul de cookies afișat la prima vizită</li>
+      <li>Setările browserului tău (dezactivarea sau ștergerea cookie-urilor)</li>
+      <li>Instrumentele opt-out ale terților (ex. <a href="https://tools.google.com/dlpage/gaoptout" target="_blank">Google Analytics Opt-out</a>)</li>
+    </ul>
+    <p><strong>Atenție:</strong> dezactivarea cookie-urilor necesare poate afecta funcționarea corectă a site-ului.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span> Drepturile tale (GDPR)</h2>
+    <p>Conform GDPR, ai următoarele drepturi privind datele personale colectate prin cookie-uri:</p>
+    <ul>
+      <li><strong>Dreptul de acces</strong> — să primești o copie a datelor prelucrate</li>
+      <li><strong>Dreptul la rectificare</strong> — corectarea datelor incorecte</li>
+      <li><strong>Dreptul la ștergere</strong> („dreptul de a fi uitat")</li>
+      <li><strong>Dreptul la restricționarea prelucrării</strong></li>
+      <li><strong>Dreptul la portabilitatea datelor</strong></li>
+      <li><strong>Dreptul de a te opune</strong> prelucrării în scop de marketing</li>
+      <li><strong>Dreptul de a retrage consimțământul</strong> oricând</li>
+    </ul>
+    <p>Pentru exercitarea drepturilor, contactează-ne la: <a href="mailto:contact@ssocietyhub.ro">contact@ssocietyhub.ro</a>. Poți depune plângere și la <strong>ANSPDCP</strong> (<a href="https://www.dataprotection.ro" target="_blank">dataprotection.ro</a>).</p>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span> Actualizări ale acestei politici</h2>
+    <p>Ne rezervăm dreptul de a actualiza această politică periodic. Data ultimei modificări este indicată în antetul documentului. Modificările semnificative vor fi comunicate printr-un banner pe site.</p>
+  </section>
+
+</div>
+
+<footer>
+  © 2024–2026 MURSE ADVERTISING S.R.L. · CUI 44923890 · Toate drepturile rezervate &nbsp;·&nbsp;
+  <a href="termeni-si-conditii.html">Termeni și Condiții</a>
+</footer>
+
+<!-- Cookie Banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <p>Folosim cookie-uri pentru a îmbunătăți experiența ta pe SSociety HUB. Unele sunt necesare, altele ne ajută să înțelegem cum folosești site-ul. <a href="#">Află mai multe</a></p>
+  <div class="banner-actions">
+    <button class="btn btn-settings" onclick="document.getElementById('cookieBanner').style.display='none'">Setări</button>
+    <button class="btn btn-reject" onclick="document.getElementById('cookieBanner').style.display='none'">Refuz</button>
+    <button class="btn btn-accept" onclick="document.getElementById('cookieBanner').style.display='none'">Accept toate</button>
+  </div>
+</div>
+
+<script>
+  // Check if already accepted
+  if(localStorage.getItem('cookies_accepted')) {
+    document.getElementById('cookieBanner').style.display = 'none';
+  }
+  document.querySelector('.btn-accept').addEventListener('click', function() {
+    localStorage.setItem('cookies_accepted', 'true');
+  });
+</script>
+
+</body>
+</html>

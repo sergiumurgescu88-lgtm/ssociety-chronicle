@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termeni și Condiții — SSociety HUB</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --surface: #111118;
+    --border: #1e1e2e;
+    --accent: #c9a84c;
+    --accent-light: #e8c96d;
+    --text: #e8e8f0;
+    --muted: #8888a8;
+    --white: #ffffff;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    min-height: 100vh;
+  }
+
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 28px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background: rgba(10,10,15,0.95);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+  }
+
+  .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+  .logo span { color: var(--accent); }
+
+  .back-link {
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid var(--border);
+    padding: 8px 20px;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .back-link:hover { border-color: var(--accent); color: var(--accent); }
+
+  .hero {
+    padding: 80px 48px 60px;
+    max-width: 860px;
+    margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    padding: 5px 14px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .meta { font-size: 0.85rem; color: var(--muted); letter-spacing: 0.04em; }
+
+  .content {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 60px 48px 100px;
+  }
+
+  .company-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 28px 32px;
+    margin-bottom: 52px;
+    border-radius: 2px;
+  }
+
+  .company-card h3 {
+    color: var(--accent);
+    margin-bottom: 16px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+  }
+
+  .company-card table { width: 100%; border-collapse: collapse; }
+  .company-card td {
+    padding: 7px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .company-card td:first-child { color: var(--muted); width: 42%; font-size: 0.82rem; letter-spacing: 0.04em; }
+  .company-card td:last-child { color: var(--text); font-weight: 500; }
+  .company-card tr:last-child td { border-bottom: none; }
+
+  /* TOC */
+  .toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 28px 32px;
+    margin-bottom: 52px;
+    border-radius: 2px;
+  }
+  .toc h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .toc ol { padding-left: 20px; }
+  .toc li { margin-bottom: 6px; }
+  .toc a { color: var(--muted); font-size: 0.88rem; text-decoration: none; transition: color 0.2s; }
+  .toc a:hover { color: var(--accent); }
+
+  section { margin-bottom: 52px; scroll-margin-top: 100px; }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    color: var(--white);
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  h2 .num {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.75rem;
+    color: var(--accent);
+    background: rgba(201,168,76,0.1);
+    padding: 3px 10px;
+    border-radius: 2px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+
+  p { margin-bottom: 14px; font-size: 0.95rem; color: #c8c8d8; }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    color: var(--text);
+    margin: 24px 0 10px;
+  }
+
+  ul, ol { padding-left: 22px; margin-bottom: 14px; }
+  ul li, ol li { font-size: 0.95rem; color: #c8c8d8; margin-bottom: 7px; }
+
+  .highlight-box {
+    background: rgba(201,168,76,0.06);
+    border: 1px solid rgba(201,168,76,0.2);
+    padding: 20px 24px;
+    border-radius: 2px;
+    margin: 20px 0;
+  }
+  .highlight-box p { margin: 0; font-size: 0.9rem; color: #d8d8b8; }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 48px;
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  @media (max-width: 640px) {
+    header, .hero, .content { padding-left: 20px; padding-right: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#" class="logo">SSociety<span>HUB</span></a>
+  <a href="#" class="back-link">← Înapoi</a>
+</header>
+
+<div class="hero">
+  <div class="tag">Legal · Utilizare</div>
+  <h1>Termeni și Condiții de Utilizare</h1>
+  <p class="meta">Ultima actualizare: 05 Martie 2026 &nbsp;·&nbsp; Valabile pentru toți utilizatorii ssocietyhub.ro</p>
+</div>
+
+<div class="content">
+
+  <div class="company-card">
+    <h3>Date de identificare operator</h3>
+    <table>
+      <tr><td>Denumire firmă</td><td>MURSE ADVERTISING S.R.L.</td></tr>
+      <tr><td>CUI</td><td>44923890</td></tr>
+      <tr><td>Nr. Înmatriculare</td><td>J40/16148/2021</td></tr>
+      <tr><td>EUID</td><td>ROONRC.J40/16148/2021</td></tr>
+      <tr><td>Data înființării</td><td>17 septembrie 2021</td></tr>
+      <tr><td>Website</td><td><a href="#">ssocietyhub.ro</a></td></tr>
+      <tr><td>Contact</td><td><a href="mailto:contact@ssocietyhub.ro">contact@ssocietyhub.ro</a></td></tr>
+    </table>
+  </div>
+
+  <div class="toc">
+    <h3>Cuprins</h3>
+    <ol>
+      <li><a href="#acceptare">Acceptarea termenilor</a></li>
+      <li><a href="#servicii">Descrierea serviciilor</a></li>
+      <li><a href="#utilizare">Condiții de utilizare</a></li>
+      <li><a href="#cont">Cont de utilizator</a></li>
+      <li><a href="#proprietate">Proprietate intelectuală</a></li>
+      <li><a href="#date">Protecția datelor personale</a></li>
+      <li><a href="#raspundere">Limitarea răspunderii</a></li>
+      <li><a href="#modificari">Modificarea termenilor</a></li>
+      <li><a href="#litigii">Litigii și legislație aplicabilă</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ol>
+  </div>
+
+  <section id="acceptare">
+    <h2><span class="num">01</span> Acceptarea termenilor</h2>
+    <p>Prin accesarea și utilizarea platformei <strong>SSociety HUB</strong> (disponibilă la adresa ssocietyhub.ro), confirmi că ai citit, înțeles și ești de acord cu prezentele Termeni și Condiții, inclusiv cu <a href="politica-cookies.html">Politica de Cookies</a>.</p>
+    <p>Dacă nu ești de acord cu acești termeni, te rugăm să încetezi utilizarea site-ului. Utilizarea continuă a platformei constituie acceptul tacit al oricăror modificări ulterioare.</p>
+    <div class="highlight-box">
+      <p>Vârsta minimă pentru utilizarea platformei este de <strong>16 ani</strong>, în conformitate cu prevederile GDPR aplicabile în România.</p>
+    </div>
+  </section>
+
+  <section id="servicii">
+    <h2><span class="num">02</span> Descrierea serviciilor</h2>
+    <p>SSociety HUB este o platformă digitală operată de <strong>MURSE ADVERTISING S.R.L.</strong> care reunește un portofoliu de proiecte și soluții digitale în domeniile:</p>
+    <ul>
+      <li>Soluții AI pentru restaurante și industria de delivery</li>
+      <li>Unelte creative și de generare conținut bazate pe inteligență artificială</li>
+      <li>Soluții de marketing digital și automatizări</li>
+      <li>Sisteme de energie solară și regenerabilă</li>
+      <li>Soluții de securitate cibernetică</li>
+      <li>Platforme pentru afaceri, francize și management operațional</li>
+      <li>Proiecte de lifestyle și wellness digital</li>
+    </ul>
+    <p>Ne rezervăm dreptul de a adăuga, modifica sau retrage orice proiect sau serviciu fără notificare prealabilă.</p>
+  </section>
+
+  <section id="utilizare">
+    <h2><span class="num">03</span> Condiții de utilizare</h2>
+    <h3>Utilizare permisă</h3>
+    <p>Ești autorizat să utilizezi platforma în scopuri legale, personale sau de afaceri, cu respectarea legislației române și europene în vigoare.</p>
+
+    <h3>Utilizare interzisă</h3>
+    <p>Este strict interzis:</p>
+    <ul>
+      <li>Utilizarea platformei pentru activități ilegale, frauduloase sau care prejudiciază terți</li>
+      <li>Reproducerea, distribuirea sau modificarea neautorizată a conținutului</li>
+      <li>Tentative de acces neautorizat la sistemele noastre sau la datele altor utilizatori</li>
+      <li>Transmiterea de conținut malițios (viruși, malware, spam)</li>
+      <li>Colectarea automată a datelor (scraping) fără acordul nostru scris prealabil</li>
+      <li>Utilizarea platformei pentru a concura direct cu serviciile MURSE ADVERTISING S.R.L. fără acord</li>
+    </ul>
+  </section>
+
+  <section id="cont">
+    <h2><span class="num">04</span> Cont de utilizator</h2>
+    <p>Unele funcționalități ale platformei pot necesita crearea unui cont. Prin crearea contului, ești responsabil pentru:</p>
+    <ul>
+      <li>Furnizarea de informații corecte și actualizate</li>
+      <li>Confidențialitatea credențialelor de acces (parolă, token)</li>
+      <li>Toate activitățile desfășurate din contul tău</li>
+    </ul>
+    <p>Ne rezervăm dreptul de a suspenda sau șterge orice cont care încalcă prezentele condiții, fără notificare prealabilă.</p>
+  </section>
+
+  <section id="proprietate">
+    <h2><span class="num">05</span> Proprietate intelectuală</h2>
+    <p>Toate elementele platformei SSociety HUB — inclusiv dar fără a se limita la: logo, denumiri, design, cod sursă, texte, imagini, proiecte, algoritmi și interfețe — sunt proprietatea exclusivă a <strong>MURSE ADVERTISING S.R.L.</strong> sau sunt utilizate sub licență.</p>
+    <p>Nicio parte a platformei nu poate fi copiată, reprodusă, distribuită, modificată sau folosită în scopuri comerciale fără acordul scris prealabil al MURSE ADVERTISING S.R.L.</p>
+    <p>Conținutul generat de utilizatori prin instrumentele noastre AI rămâne proprietatea utilizatorului, cu condiția că MURSE ADVERTISING S.R.L. nu poartă răspundere pentru conținutul generat.</p>
+  </section>
+
+  <section id="date">
+    <h2><span class="num">06</span> Protecția datelor personale</h2>
+    <p>Prelucrarea datelor cu caracter personal se realizează în conformitate cu <strong>Regulamentul (UE) 2016/679 (GDPR)</strong> și legislația română aplicabilă.</p>
+    <p>Datele colectate prin platformă (adresă email, date de navigare, preferințe) sunt utilizate exclusiv pentru:</p>
+    <ul>
+      <li>Furnizarea și îmbunătățirea serviciilor</li>
+      <li>Comunicări legate de serviciile contractate</li>
+      <li>Analiză statistică anonimizată</li>
+      <li>Respectarea obligațiilor legale</li>
+    </ul>
+    <p>Nu vindem, nu închiriem și nu transmitem datele tale personale către terți în scopuri de marketing, fără consimțământul tău explicit.</p>
+    <p>Pentru detalii complete, consultă <a href="politica-cookies.html">Politica de Cookies și Confidențialitate</a>. Poți exercita drepturile GDPR contactând: <a href="mailto:contact@ssocietyhub.ro">contact@ssocietyhub.ro</a></p>
+  </section>
+
+  <section id="raspundere">
+    <h2><span class="num">07</span> Limitarea răspunderii</h2>
+    <p>Platforma SSociety HUB este furnizată <strong>„ca atare"</strong>, fără garanții exprese sau implicite privind disponibilitatea continuă, acuratețea sau adecvarea pentru un scop anume.</p>
+    <p>MURSE ADVERTISING S.R.L. nu răspunde pentru:</p>
+    <ul>
+      <li>Pierderi directe sau indirecte rezultate din utilizarea sau imposibilitatea utilizării platformei</li>
+      <li>Conținutul generat de instrumentele AI (utilizatorul poartă responsabilitatea utilizării)</li>
+      <li>Întreruperi tehnice, erori de server sau atacuri cibernetice</li>
+      <li>Decizii comerciale sau financiare luate pe baza informațiilor de pe platformă</li>
+      <li>Conținutul site-urilor externe la care facem trimitere</li>
+    </ul>
+    <div class="highlight-box">
+      <p>Instrumentele de tip AI disponibile pe platformă generează conținut automat. MURSE ADVERTISING S.R.L. nu garantează acuratețea, completitudinea sau legalitatea conținutului generat. Utilizatorul este responsabil pentru verificarea și utilizarea acestuia.</p>
+    </div>
+  </section>
+
+  <section id="modificari">
+    <h2><span class="num">08</span> Modificarea termenilor</h2>
+    <p>MURSE ADVERTISING S.R.L. își rezervă dreptul de a modifica oricând prezentele Termeni și Condiții. Modificările intră în vigoare la data publicării pe platformă.</p>
+    <p>Utilizarea continuă a platformei după publicarea modificărilor constituie acceptul acestora. Îți recomandăm să verifici periodic această pagină.</p>
+  </section>
+
+  <section id="litigii">
+    <h2><span class="num">09</span> Litigii și legislație aplicabilă</h2>
+    <p>Prezentele Termeni și Condiții sunt guvernate de legislația română în vigoare, în special:</p>
+    <ul>
+      <li>Codul Civil român</li>
+      <li>Legea nr. 365/2002 privind comerțul electronic</li>
+      <li>Regulamentul (UE) 2016/679 (GDPR)</li>
+      <li>OUG nr. 34/2014 privind drepturile consumatorilor</li>
+    </ul>
+    <p>Orice litigiu va fi soluționat pe cale amiabilă. În caz de neînțelegere, competența revine instanțelor judecătorești din <strong>București, România</strong>.</p>
+    <p>Consumatorii din UE pot accesa platforma de soluționare online a litigiilor: <a href="https://ec.europa.eu/consumers/odr" target="_blank">ec.europa.eu/consumers/odr</a></p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="num">10</span> Contact</h2>
+    <p>Pentru orice întrebări, reclamații sau exercitarea drepturilor tale legale, ne poți contacta:</p>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:contact@ssocietyhub.ro">contact@ssocietyhub.ro</a></li>
+      <li><strong>Website:</strong> <a href="#">ssocietyhub.ro</a></li>
+      <li><strong>Operator:</strong> MURSE ADVERTISING S.R.L. · CUI 44923890 · J40/16148/2021</li>
+    </ul>
+    <p>Vom răspunde în termen de maximum <strong>30 de zile lucrătoare</strong> de la primirea solicitării.</p>
+  </section>
+
+</div>
+
+<footer>
+  © 2024–2026 MURSE ADVERTISING S.R.L. · CUI 44923890 · Toate drepturile rezervate &nbsp;·&nbsp;
+  <a href="politica-cookies.html">Politică Cookies</a>
+</footer>
+
+</body>
+</html>

@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
 import { Project } from '@/data/projects';
+import { getTranslatedProject } from '@/data/projectTranslations';
 
 const borderColors: Record<string, string> = {
   resto: 'from-indigo-500 to-indigo-400', ai: 'from-cyan-500 to-cyan-400', mkt: 'from-amber-500 to-amber-400',
@@ -20,7 +21,8 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project, onOpenPreview }: ProjectCardProps) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const p = getTranslatedProject(project, language);
 
   return (
     <motion.div
@@ -33,9 +35,9 @@ const ProjectCard = ({ project, onOpenPreview }: ProjectCardProps) => {
     >
       <div className={`h-[3px] bg-gradient-to-r ${borderColors[project.category] || 'from-indigo-500 to-cyan-500'}`} />
       <div className="p-4 sm:p-5 lg:p-6">
-        <div className="text-2xl lg:text-3xl mb-2 sm:mb-3">{project.emoji}</div>
-        <h3 className="font-bold text-hub-text text-base lg:text-lg leading-snug mb-1.5 sm:mb-2">{project.name}</h3>
-        <p className="text-[13px] sm:text-sm lg:text-base leading-relaxed text-hub-muted group-hover:text-hub-secondary transition-colors mb-3 sm:mb-4 line-clamp-2">{project.description}</p>
+        <div className="text-2xl lg:text-3xl mb-2 sm:mb-3">{p.emoji}</div>
+        <h3 className="font-bold text-hub-text text-base lg:text-lg leading-snug mb-1.5 sm:mb-2">{p.name}</h3>
+        <p className="text-[13px] sm:text-sm lg:text-base leading-relaxed text-hub-muted group-hover:text-hub-secondary transition-colors mb-3 sm:mb-4 line-clamp-2">{p.description}</p>
         <div className="flex items-center justify-between gap-2">
           {project.status === 'live' && (
             <span className="flex items-center gap-1.5 text-xs lg:text-sm px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">

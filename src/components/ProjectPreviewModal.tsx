@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Info, Users, Lightbulb, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { Project } from '@/data/projects';
+import { getTranslatedProject } from '@/data/projectTranslations';
 
 interface ProjectPreviewModalProps {
   project: Project | null;
@@ -20,8 +21,9 @@ const catAccent: Record<string, { gradient: string; text: string; border: string
 };
 
 const ProjectPreviewModal = ({ project, onClose }: ProjectPreviewModalProps) => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   if (!project) return null;
+  const p = getTranslatedProject(project, language);
 
   const isLive = project.status === 'live' || project.status === 'demo';
   const canPreview = isLive && project.link !== '#' && !project.link.endsWith('.pdf');
@@ -59,8 +61,8 @@ const ProjectPreviewModal = ({ project, onClose }: ProjectPreviewModalProps) => 
 
             {/* Info panel */}
             <div className="w-full lg:w-[440px] p-6 sm:p-8 lg:p-10 overflow-y-auto border-t lg:border-t-0 lg:border-l border-white/10">
-              <div className="text-4xl sm:text-5xl lg:text-6xl mb-3">{project.emoji}</div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-hub-text mb-3 leading-tight">{project.name}</h2>
+              <div className="text-4xl sm:text-5xl lg:text-6xl mb-3">{p.emoji}</div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-hub-text mb-3 leading-tight">{p.name}</h2>
 
               <div className="flex gap-2 mb-5 lg:mb-6">
                 <span className={`text-xs lg:text-sm px-2.5 py-1 rounded-full ${
@@ -77,19 +79,19 @@ const ProjectPreviewModal = ({ project, onClose }: ProjectPreviewModalProps) => 
                   <div className={`flex items-center gap-2 ${accent.text} text-sm lg:text-base font-semibold mb-1.5 lg:mb-2`}>
                     <Info className="w-4 h-4 lg:w-5 lg:h-5 shrink-0" /> {t.whatIsThis}
                   </div>
-                  <p className="text-sm lg:text-base leading-relaxed text-hub-secondary">{project.description}</p>
+                  <p className="text-sm lg:text-base leading-relaxed text-hub-secondary">{p.description}</p>
                 </div>
                 <div>
                   <div className="flex items-center gap-2 text-cyan-400 text-sm lg:text-base font-semibold mb-1.5 lg:mb-2">
                     <Users className="w-4 h-4 lg:w-5 lg:h-5 shrink-0" /> {t.whoIsItFor}
                   </div>
-                  <p className="text-sm lg:text-base leading-relaxed text-hub-secondary">{project.targetAudience}</p>
+                  <p className="text-sm lg:text-base leading-relaxed text-hub-secondary">{p.targetAudience}</p>
                 </div>
                 <div>
                   <div className="flex items-center gap-2 text-amber-400 text-sm lg:text-base font-semibold mb-1.5 lg:mb-2">
                     <Lightbulb className="w-4 h-4 lg:w-5 lg:h-5 shrink-0" /> {t.whyInnovative}
                   </div>
-                  <p className="text-sm lg:text-base leading-relaxed text-hub-secondary">{project.innovationReason}</p>
+                  <p className="text-sm lg:text-base leading-relaxed text-hub-secondary">{p.innovationReason}</p>
                 </div>
               </div>
 

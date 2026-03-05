@@ -179,14 +179,6 @@ export const projects: Project[] = [
     link: 'https://ai-creator-studio-968474198722.us-west1.run.app/', status: 'live'
   },
   {
-    id: 'nano-banana', category: 'ai', emoji: '🍌',
-    name: 'Nano Banana Pro — Automatizări AI',
-    description: 'Platformă puternică de automatizări AI pentru power users. Creează workflow-uri complexe, automatizează task-uri repetitive, procesează date în bulk și conectează servicii diferite între ele. Include: generare text, analiză date, procesare imagini, scraping web și integrări API — totul din aceeași interfață.',
-    targetAudience: 'Antreprenori tech-savvy, growth hackeri și echipe de operațiuni care vor să automatizeze tot ce se poate — de la procesarea email-urilor la generarea de rapoarte complexe.',
-    innovationReason: 'Platformă de automatizare AI all-in-one care combină puterea mai multor instrumente într-o singură interfață — nu ai nevoie de Zapier + ChatGPT + alte 5 tool-uri separate.',
-    link: 'https://nano-banana-pro-968474198722.us-west1.run.app/', status: 'live'
-  },
-  {
     id: 'nano-banana-demo', category: 'ai', emoji: '🍌',
     name: 'Nano Banana Pro — Demo Gratuit',
     description: 'Versiunea demo completă a Nano Banana Pro. Testezi toate funcționalitățile fără cont și fără plată: automatizări, generare conținut, procesare date și workflow-uri. Ideal pentru a explora ce poate face platforma înainte de a te decide. Funcțional 100%, cu limite de utilizare.',
@@ -217,14 +209,6 @@ export const projects: Project[] = [
     targetAudience: 'Non-programatori cu idei de aplicații — antreprenori, freelanceri, proprietari de business-uri mici care au nevoie de o aplicație custom dar nu au buget pentru dezvoltatori.',
     innovationReason: 'Creare de aplicații prin conversație naturală — descrii ce vrei în cuvinte simple, AI-ul înțelege, construiește și te lasă să ajustezi. De la idee la aplicație funcțională în minute.',
     link: 'https://exact-app-creator.lovable.app/', status: 'live'
-  },
-  {
-    id: 'magic-reveal', category: 'ai', emoji: '🪄',
-    name: 'Magic Reveal — Prezentări Dramatice',
-    description: 'Creează momente de „reveal" spectaculoase cu efecte vizuale magice. Perfect pentru lansări de produse, dezvăluiri de logo, anunțuri importante sau momente speciale la evenimente. Orchestrează automat secvențe de animații, efecte de lumină, tranziții și countdown-uri dramatice.',
-    targetAudience: 'Event planners, echipe de marketing, companii care lansează produse noi și oricine vrea să transforme un anunț obișnuit într-un moment memorabil și cinematic.',
-    innovationReason: 'Orchestrare automată de reveal-uri cu efecte vizuale de nivel Hollywood — fără echipă de producție, fără After Effects, doar AI și creativitate.',
-    link: 'https://magic-reveal-orchestrator.lovable.app/', status: 'live'
   },
   {
     id: 'museflow', category: 'ai', emoji: '🎵',
@@ -286,14 +270,6 @@ export const projects: Project[] = [
   },
 
   // ─── ENERGIE (6) ───
-  {
-    id: 'helios-solar', category: 'energy', emoji: '🌞',
-    name: 'Helios Solar Intelligence',
-    description: 'Platformă avansată de analiză solară cu AI. Calculează potențialul solar al oricărei locații folosind date meteo reale, orientarea acoperișului, umbrele din jur și tarifele locale de energie. Generează un plan complet: câte panouri ai nevoie, ce invertor, cât costă, cât economisești și în câți ani îți recuperezi investiția.',
-    targetAudience: 'Proprietari de case și companii interesate serios de panouri solare — vor o analiză detaliată și personalizată, nu doar estimări generice.',
-    innovationReason: 'Analiză solară AI cu date meteo locale în timp real, modelare 3D a umbrelor și calcul ROI cu tarife de energie actualizate — precizie de 95% vs. calculatoarele tradiționale.',
-    link: '#', status: 'under-construction'
-  },
   {
     id: 'helios-simplu', category: 'energy', emoji: '⚡',
     name: 'Helios — Calculator Solar Rapid',
@@ -376,14 +352,6 @@ export const projects: Project[] = [
     innovationReason: 'Consultant agricol AI care combină viziune computerizată (identificare plante/boli din poze) cu date meteo locale și knowledge agronomic — ca un inginer agronom disponibil 24/7.',
     link: 'https://greenthumb-ai-968474198722.us-west1.run.app/', status: 'live'
   },
-  {
-    id: 'claude-special', category: 'ops', emoji: '🔮',
-    name: 'Proiect Special Claude AI',
-    description: 'Un proiect experimental și demonstrativ creat cu Claude AI — un artifact public care showcases capabilitățile avansate ale inteligenței artificiale. Poate fi o demonstrație interactivă, un tool experimental sau un concept inovator în curs de dezvoltare.',
-    targetAudience: 'Entuziaști AI, developeri curioși și early adopters care vor să vadă ce e posibil cu cele mai noi tehnologii AI — un spațiu de experimentare și inovație.',
-    innovationReason: 'Experiment public cu AI de ultimă generație — un spațiu de testare a ideilor îndrăznețe și conceptelor noi, accesibil oricui.',
-    link: '#', status: 'under-construction'
-  },
 
   // ─── AFACERI (6) ───
   {
@@ -393,14 +361,6 @@ export const projects: Project[] = [
     targetAudience: 'Pasionați de mașini Mercedes-Benz, cumpărători care caută un Mercedes second-hand de calitate și colecționari auto interesați de modele specifice.',
     innovationReason: 'Platformă dedicată exclusiv brandului Mercedes-Benz cu prezentare premium — nu un clasic autovit.ro, ci o experiență de showroom digital cu atenție la detalii.',
     link: 'https://alexmercedes.online/', status: 'live'
-  },
-  {
-    id: 'alex-ai-mercedes', category: 'biz', emoji: '🔧',
-    name: 'Alex AI — Expert Tehnic Mercedes',
-    description: 'Asistent AI specializat exclusiv pe mașini Mercedes-Benz. Răspunde la orice întrebare tehnică: coduri de eroare, intervale de service, compatibilitate piese, probleme frecvente pe model, costuri de întreținere și sfaturi de cumpărare. Știe totul despre fiecare model Mercedes din 1990 până azi.',
-    targetAudience: 'Proprietari de Mercedes care au întrebări tehnice, mecanici auto care lucrează pe Mercedes, și cumpărători care vor să știe totul despre un model înainte de achiziție.',
-    innovationReason: 'Expert tehnic AI antrenat pe întreaga bază de cunoștințe Mercedes-Benz — coduri de eroare, TSB-uri, recall-uri, specificații pe model/an — mai complet decât majoritatea mecanicilor.',
-    link: 'https://alex-ai-mercedes-technical-expert-765729445735.us-west1.run.app/', status: 'live'
   },
   {
     id: 'mbeuroparts', category: 'biz', emoji: '🚙',
@@ -451,22 +411,6 @@ export const projects: Project[] = [
     targetAudience: 'Utilizatori de internet care vor să distingă între informații reale și dezinformare — jurnaliști, profesori, părinți, și oricine vrea să navigheze responsabil pe internet.',
     innovationReason: 'Detector AI de fake news multi-layered — nu doar verifică fapte, ci analizează limbajul, structura argumentului și pattern-urile de manipulare emoțională.',
     link: 'https://truthsignal-765729445735.us-west1.run.app/', status: 'live'
-  },
-  {
-    id: 'guardian-ai', category: 'security', emoji: '🔒',
-    name: 'Guardian AI — Monitorizare & Protecție',
-    description: 'Sistem AI de monitorizare și protecție digitală continuă. Urmărește activitatea conturilor tale online, detectează acces neautorizat, monitorizează scurgeri de date, verifică puterea parolelor și alertează instant când ceva nu e în regulă. Include recomandări de securizare personalizate.',
-    targetAudience: 'Familii digitale care vor liniște sufletească, companii mici care vor protecție fără echipă IT dedicată și oricine ia serios securitatea digitală personală.',
-    innovationReason: 'Monitorizare AI proactivă 24/7 care nu așteaptă să se întâmple ceva rău — detectează comportamente suspecte și te avertizează ÎNAINTE ca un incident să devină o problemă.',
-    link: 'https://guardian-ai-968474198722.us-west1.run.app/', status: 'live'
-  },
-  {
-    id: 'mobile-guardian', category: 'security', emoji: '🛡️',
-    name: 'Mobile First Guardian — Securitate Mobilă',
-    description: 'Sistem de securitate digitală optimizat complet pentru dispozitive mobile. Protecție în timp real pe telefon: detectare aplicații malițioase, securizare rețele WiFi publice, protecție împotriva phishing-ului pe SMS/WhatsApp și monitorizare permisiuni aplicații. În curs de dezvoltare.',
-    targetAudience: 'Utilizatori de smartphone care accesează date sensibile (banking, email, social media) de pe telefon și vor protecție profesionistă on-the-go, fără să încetinească telefonul.',
-    innovationReason: 'Securitate AI mobile-first care protejează acolo unde ești cel mai vulnerabil — pe telefonul personal, conectat la WiFi-uri publice, primind mesaje de phishing pe WhatsApp.',
-    link: '#', status: 'under-construction'
   },
 
   // ─── LIFESTYLE (6) ───

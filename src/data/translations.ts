@@ -1,11 +1,11 @@
 export const languages = [
-  { code: 'ro', label: 'Română', flag: '🇷🇴' },
   { code: 'en', label: 'English', flag: '🇬🇧' },
   { code: 'es', label: 'Español', flag: '🇪🇸' },
   { code: 'fr', label: 'Français', flag: '🇫🇷' },
   { code: 'it', label: 'Italiano', flag: '🇮🇹' },
   { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
   { code: 'ar', label: 'العربية', flag: '🇸🇦' },
+  { code: 'ro', label: 'Română', flag: '🇷🇴' },
 ];
 
 export type TranslationKey = keyof typeof translations.ro;

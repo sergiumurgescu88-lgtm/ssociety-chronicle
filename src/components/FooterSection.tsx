@@ -9,9 +9,40 @@ const FooterSection = () => {
       <div className="text-xl sm:text-2xl font-extrabold text-hub-text mb-2 sm:mb-3">👋 Sergiu Murgescu</div>
       <p className="text-xs sm:text-sm text-hub-muted mb-2 leading-relaxed">{t.footerText}</p>
       <p className="text-xs sm:text-sm text-hub-muted mb-5 sm:mb-6 leading-relaxed">{t.footerClick}</p>
-      <span className="inline-block text-[11px] sm:text-xs px-4 py-2 rounded-full bg-indigo-500/5 text-hub-muted border border-indigo-500/10">
+      <span className="inline-block text-[11px] sm:text-xs px-4 py-2 rounded-full bg-indigo-500/5 text-hub-muted border border-indigo-500/10 mb-8 sm:mb-12">
         ✦ {t.footerPassion}
       </span>
+
+      {/* Legal footer */}
+      <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-6 sm:mb-8" />
+      <div className="max-w-2xl mx-auto space-y-2">
+        <div className="text-sm sm:text-base font-bold text-hub-text tracking-wide">SSocietyHUB</div>
+        <div className="text-[11px] sm:text-xs text-hub-muted">MURSE ADVERTISING S.R.L</div>
+        <div className="text-[11px] sm:text-xs text-hub-muted">CUI: 44923890 · J40/16148/2021</div>
+        <div className="text-[11px] sm:text-xs text-hub-muted mt-1">© 2024–2026 Toate drepturile rezervate</div>
+        <div className="flex items-center justify-center gap-3 sm:gap-4 pt-3">
+          <a
+            href="/termeni-si-conditii.html"
+            className="text-[11px] sm:text-xs text-hub-muted hover:text-indigo-400 transition-colors underline underline-offset-2"
+          >
+            Termeni și Condiții
+          </a>
+          <span className="text-hub-muted/30">·</span>
+          <a
+            href="/politica-cookies.html"
+            className="text-[11px] sm:text-xs text-hub-muted hover:text-indigo-400 transition-colors underline underline-offset-2"
+          >
+            Politică Cookies
+          </a>
+          <span className="text-hub-muted/30">·</span>
+          <a
+            href="mailto:contact@ssocietyhub.ro"
+            className="text-[11px] sm:text-xs text-hub-muted hover:text-indigo-400 transition-colors underline underline-offset-2"
+          >
+            Contact
+          </a>
+        </div>
+      </div>
     </footer>
   );
 };

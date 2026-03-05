@@ -18,6 +18,7 @@ import ProjectPreviewModal from '@/components/ProjectPreviewModal';
 import NewsletterSection from '@/components/NewsletterSection';
 import MobileSidebar from '@/components/MobileSidebar';
 import FooterSection from '@/components/FooterSection';
+import CookieBanner from '@/components/CookieBanner';
 
 const Index = () => {
   const { t } = useLanguage();
@@ -150,6 +151,7 @@ const Index = () => {
       </div>
 
       <ProjectPreviewModal project={selectedProject} onClose={() => setSelectedProject(null)} />
+      <CookieBanner />
     </div>
   );
 };

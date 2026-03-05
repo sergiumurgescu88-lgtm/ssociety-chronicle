@@ -13,7 +13,7 @@ export type TranslationKey = keyof typeof translations.ro;
 export const translations: Record<string, Record<string, string>> = {
   ro: {
     heroTitle: "Bun venit în SSociety HUB!",
-    heroSubtitle: "Sunt Sergiu și te invit să descoperi toate proiectele noastre faine!",
+    heroSubtitle: "Sunt Sergiu, arhitectul SSociety HUB. Aici găsești tot ce am construit împreună cu echipa noastră.",
     heroDescription: "Am adunat aici tot ce am construit: de la roboți deștepți care ajută restaurantele să meargă mai bine, până la sisteme de energie solară și unelte care te ajută să fii mai creativ.",
     freeAccessTitle: "Totul este 100% Gratuit!",
     freeAccessSubtitle: "Deblochează toate cele 62 de funcții premium instant prin abonarea la newsletter.",

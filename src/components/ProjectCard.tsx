@@ -35,7 +35,7 @@ const ProjectCard = ({ project, onOpenPreview }: ProjectCardProps) => {
     >
       <div className={`h-[3px] bg-gradient-to-r ${borderColors[project.category] || 'from-indigo-500 to-cyan-500'}`} />
       <div className="p-4 sm:p-5 lg:p-6">
-        <div className="text-2xl lg:text-3xl mb-2 sm:mb-3">{p.emoji}</div>
+        <div className="text-2xl lg:text-3xl mb-2 sm:mb-3">{project.emoji}</div>
         <h3 className="font-bold text-hub-text text-base lg:text-lg leading-snug mb-1.5 sm:mb-2">{p.name}</h3>
         <p className="text-[13px] sm:text-sm lg:text-base leading-relaxed text-hub-muted group-hover:text-hub-secondary transition-colors mb-3 sm:mb-4 line-clamp-2">{p.description}</p>
         <div className="flex items-center justify-between gap-2">

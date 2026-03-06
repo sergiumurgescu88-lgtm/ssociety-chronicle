@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+
 import { Category, categories } from '@/data/categories';
 import { projects, Project } from '@/data/projects';
 import { useLanguage } from '@/context/LanguageContext';
@@ -7,6 +8,7 @@ import HeroSection from '@/components/HeroSection';
 import StatsOverview from '@/components/StatsOverview';
 import WhatsAppCTA from '@/components/WhatsAppCTA';
 import WhatsAllSection from '@/components/WhatsAllSection';
+import WhatsAllStealthSection from '@/components/WhatsAllStealthSection';
 import InstantMenuSection from '@/components/InstantMenuSection';
 import WildBotSection from '@/components/WildBotSection';
 import ClaudeTradingSection from '@/components/ClaudeTradingSection';
@@ -96,6 +98,7 @@ const Index = () => {
         </div>
 
         <WhatsAllSection />
+        <WhatsAllStealthSection />
         <InstantMenuSection />
         <WildBotSection />
         <ClaudeTradingSection />

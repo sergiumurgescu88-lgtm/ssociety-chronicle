@@ -230,9 +230,8 @@ const WhatsAllStealthSection = () => {
               <span className="text-2xl sm:text-3xl lg:text-4xl">👻</span>
             </div>
             <div>
-              <span className="text-xs lg:text-sm text-[#00e5ff] font-medium">{c.badge}</span>
-              <h2 className="text-xl sm:text-2xl lg:text-4xl font-extrabold text-[#e0f7fa] leading-tight">{c.title}</h2>
-              <p className="text-sm sm:text-base lg:text-lg text-[#80deea] font-medium mt-1">{c.subtitle}</p>
+              <h2 className="text-xl sm:text-2xl lg:text-4xl font-extrabold text-[#e0f7fa] leading-tight">{c.badge}</h2>
+              <p className="text-sm sm:text-base lg:text-lg text-[#80deea] font-medium mt-1">{c.title}</p>
             </div>
           </div>
 
@@ -255,8 +254,6 @@ const WhatsAllStealthSection = () => {
             </div>
           </div>
 
-          {/* Description */}
-          <p className="text-[#e0f7fa] font-bold text-sm sm:text-base lg:text-xl mb-4 sm:mb-6">{c.desc}</p>
 
           {/* Stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 mb-6 sm:mb-8">

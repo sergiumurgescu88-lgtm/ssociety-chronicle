@@ -97,6 +97,7 @@ const Index = () => {
           </div>
         </div>
 
+        <WhatsAllSection />
         <WhatsAllStealthSection />
         <WildBotSection />
         <ClaudeTradingSection />

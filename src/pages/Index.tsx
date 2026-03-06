@@ -98,10 +98,10 @@ const Index = () => {
         </div>
 
         <WhatsAllSection />
-        <InstantMenuSection />
         <WildBotSection />
         <ClaudeTradingSection />
         <SocietyHubStoreSection />
+        <InstantMenuSection />
         <MrDeliverySection />
         <MBEuroPartsSection />
         <DownloadSection />

@@ -9,6 +9,7 @@ import WhatsAppCTA from '@/components/WhatsAppCTA';
 import WhatsAllSection from '@/components/WhatsAllSection';
 import InstantMenuSection from '@/components/InstantMenuSection';
 import WildBotSection from '@/components/WildBotSection';
+import ClaudeTradingSection from '@/components/ClaudeTradingSection';
 import SocietyHubStoreSection from '@/components/SocietyHubStoreSection';
 import DownloadSection from '@/components/DownloadSection';
 import MBEuroPartsSection from '@/components/MBEuroPartsSection';
@@ -95,6 +96,7 @@ const Index = () => {
         </div>
 
         <WhatsAllSection />
+        <ClaudeTradingSection />
         <InstantMenuSection />
         <WildBotSection />
         <SocietyHubStoreSection />

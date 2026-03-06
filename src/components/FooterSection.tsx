@@ -20,6 +20,15 @@ const FooterSection = () => {
         <div className="text-[11px] sm:text-xs text-hub-muted">MURSE ADVERTISING S.R.L</div>
         <div className="text-[11px] sm:text-xs text-hub-muted">CUI: 44923890 · J40/16148/2021</div>
         <div className="text-[11px] sm:text-xs text-hub-muted mt-1">© 2024–2026 Toate drepturile rezervate</div>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 pt-3 text-[11px] sm:text-xs text-hub-muted">
+          <a href="mailto:sergiusociety@gmail.com" className="hover:text-indigo-400 transition-colors flex items-center gap-1.5">
+            ✉ sergiusociety@gmail.com
+          </a>
+          <span className="hidden sm:inline text-hub-muted/30">·</span>
+          <a href="https://wa.me/40768676141" target="_blank" rel="noopener noreferrer" className="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+            📱 +40 768 676 141
+          </a>
+        </div>
         <div className="flex items-center justify-center gap-3 sm:gap-4 pt-3">
           <a
             href="/termeni-si-conditii.html"
@@ -33,13 +42,6 @@ const FooterSection = () => {
             className="text-[11px] sm:text-xs text-hub-muted hover:text-indigo-400 transition-colors underline underline-offset-2"
           >
             Politică Cookies
-          </a>
-          <span className="text-hub-muted/30">·</span>
-          <a
-            href="mailto:contact@ssocietyhub.ro"
-            className="text-[11px] sm:text-xs text-hub-muted hover:text-indigo-400 transition-colors underline underline-offset-2"
-          >
-            Contact
           </a>
         </div>
       </div>

@@ -98,14 +98,14 @@ const Index = () => {
         </div>
 
         <WhatsAllSection />
-        <WhatsAllStealthSection />
-        <WildBotSection />
         <ClaudeTradingSection />
         <SocietyHubStoreSection />
         <InstantMenuSection />
         <MrDeliverySection />
         <MBEuroPartsSection />
         <DownloadSection />
+        <WhatsAllStealthSection />
+        <WildBotSection />
 
         <FilterBar activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
 

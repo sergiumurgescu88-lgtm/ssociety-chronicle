@@ -98,6 +98,7 @@ const Index = () => {
           </div>
         </div>
 
+        <NeuroTradeSection />
         <WhatsAllSection />
         <ClaudeTradingSection />
         <SocietyHubStoreSection />

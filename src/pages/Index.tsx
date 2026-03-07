@@ -11,6 +11,7 @@ import WhatsAllSection from '@/components/WhatsAllSection';
 import WhatsAllStealthSection from '@/components/WhatsAllStealthSection';
 import InstantMenuSection from '@/components/InstantMenuSection';
 import WildBotSection from '@/components/WildBotSection';
+import NeuroTradeSection from '@/components/NeuroTradeSection';
 import ClaudeTradingSection from '@/components/ClaudeTradingSection';
 import SocietyHubStoreSection from '@/components/SocietyHubStoreSection';
 import DownloadSection from '@/components/DownloadSection';
@@ -97,6 +98,7 @@ const Index = () => {
           </div>
         </div>
 
+        <NeuroTradeSection />
         <WhatsAllSection />
         <ClaudeTradingSection />
         <SocietyHubStoreSection />

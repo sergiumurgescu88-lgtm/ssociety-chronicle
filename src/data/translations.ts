@@ -104,7 +104,7 @@ export const translations: Record<string, Record<string, string>> = {
     downloadPdf: "Download PDF Presentations",
     pdfResources: "PDF Resources",
     pdfDescription: "Download detailed presentations of our top projects.",
-    footerText: "62 digital projects · Restaurants, AI, Energy, Marketing and more",
+    footerText: "71 digital projects · Restaurants, AI, Energy, Marketing and more",
     footerClick: "Click any card to visit the project!",
     footerPassion: "Built with passion & artificial intelligence — 2026",
     successSubscribe: "Successfully subscribed!",

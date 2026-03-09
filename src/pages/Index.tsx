@@ -115,6 +115,9 @@ const Index = () => {
         <AIStudioSection />
         <VentureAISection />
         <WildBotSection />
+        <SSocietySafeSection />
+        <PromptLabSection />
+        <SSocietyStudioSection />
 
         <FilterBar activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
 

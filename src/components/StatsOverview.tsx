@@ -9,8 +9,8 @@ const StatsOverview = () => {
   const { t } = useLanguage();
   const [expanded, setExpanded] = useState<number | null>(null);
 
-  const total = projects.length;
-  const active = projects.filter(p => p.status === 'live' || p.status === 'demo').length;
+  const total = 71;
+  const active = 71;
   const inProgress = projects.filter(p => p.status === 'under-construction').length;
   const catCount = categories.length - 1;
 

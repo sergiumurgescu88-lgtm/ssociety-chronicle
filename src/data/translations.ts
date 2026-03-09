@@ -42,7 +42,7 @@ export const translations: Record<string, Record<string, string>> = {
     downloadPdf: "Descarcă Prezentările PDF",
     pdfResources: "Resurse PDF",
     pdfDescription: "Descarcă prezentările detaliate ale proiectelor noastre de top.",
-    footerText: "62 proiecte digitale · Restaurante, AI, Energie, Marketing și mai mult",
+    footerText: "71 proiecte digitale · Restaurante, AI, Energie, Marketing și mai mult",
     footerClick: "Click pe orice card pentru a vizita proiectul!",
     footerPassion: "Construit cu pasiune & inteligență artificială — 2026",
     successSubscribe: "Te-ai abonat cu succes!",

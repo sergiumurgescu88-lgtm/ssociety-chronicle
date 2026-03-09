@@ -228,7 +228,7 @@ export const translations: Record<string, Record<string, string>> = {
     downloadPdf: "Télécharger les Présentations PDF",
     pdfResources: "Ressources PDF",
     pdfDescription: "Téléchargez les présentations détaillées de nos meilleurs projets.",
-    footerText: "62 projets numériques · Restaurants, IA, Énergie, Marketing et plus",
+    footerText: "71 projets numériques · Restaurants, IA, Énergie, Marketing et plus",
     footerClick: "Cliquez sur n'importe quelle carte pour visiter le projet !",
     footerPassion: "Construit avec passion & intelligence artificielle — 2026",
     successSubscribe: "Abonné avec succès !",

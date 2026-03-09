@@ -140,7 +140,7 @@ export const translations: Record<string, Record<string, string>> = {
     heroSubtitle: "Soy Sergiu, el arquitecto de SSociety HUB. Aquí encontrarás todo lo que hemos construido junto con nuestro equipo.",
     heroDescription: "71 proyectos activos y muchos más en desarrollo. No es un portafolio, sino un mundo en constante evolución.\n\nDesde bots de IA para restaurantes y sistemas solares inteligentes, hasta herramientas creativas, plataformas de seguridad y proyectos de estilo de vida.\n\nExplora, inspírate o construyamos algo juntos.",
     freeAccessTitle: "¡Todo es 100% Gratis!",
-    freeAccessSubtitle: "Desbloquea las 62 funciones premium al suscribirte a nuestro newsletter.",
+    freeAccessSubtitle: "Desbloquea las 71 funciones premium al suscribirte a nuestro newsletter.",
     subscribePlaceholder: "Tu correo electrónico",
     subscribeButton: "Desbloquear Todas las Funciones",
     projects: "Proyectos",

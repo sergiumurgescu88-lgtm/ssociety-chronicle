@@ -120,6 +120,8 @@ const Index = () => {
         <SSocietySafeSection />
         <PromptLabSection />
         <SSocietyStudioSection />
+        <LifeOSSection />
+        <SSocietyViewSection />
 
         <FilterBar activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
 

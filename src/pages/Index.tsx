@@ -110,6 +110,9 @@ const Index = () => {
         <MBEuroPartsSection />
         <DownloadSection />
         <WhatsAllStealthSection />
+        <SecureScanSection />
+        <AIStudioSection />
+        <VentureAISection />
         <WildBotSection />
 
         <FilterBar activeCategory={activeCategory} setActiveCategory={setActiveCategory} />

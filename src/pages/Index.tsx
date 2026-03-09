@@ -8,7 +8,7 @@ import HeroSection from '@/components/HeroSection';
 import StatsOverview from '@/components/StatsOverview';
 import WhatsAppCTA from '@/components/WhatsAppCTA';
 import WhatsAllSection from '@/components/WhatsAllSection';
-import WhatsAllStealthSection from '@/components/WhatsAllStealthSection';
+
 import InstantMenuSection from '@/components/InstantMenuSection';
 import WildBotSection from '@/components/WildBotSection';
 import SecureScanSection from '@/components/SecureScanSection';

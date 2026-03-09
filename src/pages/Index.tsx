@@ -105,23 +105,22 @@ const Index = () => {
           </div>
         </div>
 
-        <NeuroTradeSection />
-        <WhatsAllSection />
-        <ClaudeTradingSection />
         <SocietyHubStoreSection />
-        <InstantMenuSection />
-        <MrDeliverySection />
         <MBEuroPartsSection />
-        <DownloadSection />
-        <SecureScanSection />
+        <NeuroTradeSection />
+        <ClaudeTradingSection />
+        <WhatsAllSection />
+        <MrDeliverySection />
+        <SSocietyStudioSection />
+        <PromptLabSection />
+        <InstantMenuSection />
         <AIStudioSection />
         <VentureAISection />
-        <WildBotSection />
+        <SecureScanSection />
         <SSocietySafeSection />
-        <PromptLabSection />
-        <SSocietyStudioSection />
         <LifeOSSection />
         <SSocietyViewSection />
+        <DownloadSection />
 
         <FilterBar activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
 

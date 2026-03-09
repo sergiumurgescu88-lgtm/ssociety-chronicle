@@ -14,6 +14,8 @@ import SecureScanSection from '@/components/SecureScanSection';
 import SSocietySafeSection from '@/components/SSocietySafeSection';
 import PromptLabSection from '@/components/PromptLabSection';
 import SSocietyStudioSection from '@/components/SSocietyStudioSection';
+import LifeOSSection from '@/components/LifeOSSection';
+import SSocietyViewSection from '@/components/SSocietyViewSection';
 import AIStudioSection from '@/components/AIStudioSection';
 import VentureAISection from '@/components/VentureAISection';
 import NeuroTradeSection from '@/components/NeuroTradeSection';

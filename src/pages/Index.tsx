@@ -11,6 +11,9 @@ import WhatsAllSection from '@/components/WhatsAllSection';
 import WhatsAllStealthSection from '@/components/WhatsAllStealthSection';
 import InstantMenuSection from '@/components/InstantMenuSection';
 import WildBotSection from '@/components/WildBotSection';
+import SecureScanSection from '@/components/SecureScanSection';
+import AIStudioSection from '@/components/AIStudioSection';
+import VentureAISection from '@/components/VentureAISection';
 import NeuroTradeSection from '@/components/NeuroTradeSection';
 import ClaudeTradingSection from '@/components/ClaudeTradingSection';
 import SocietyHubStoreSection from '@/components/SocietyHubStoreSection';
@@ -107,6 +110,9 @@ const Index = () => {
         <MBEuroPartsSection />
         <DownloadSection />
         <WhatsAllStealthSection />
+        <SecureScanSection />
+        <AIStudioSection />
+        <VentureAISection />
         <WildBotSection />
 
         <FilterBar activeCategory={activeCategory} setActiveCategory={setActiveCategory} />

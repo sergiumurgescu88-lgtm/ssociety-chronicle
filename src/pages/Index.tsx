@@ -91,7 +91,7 @@ const Index = () => {
         <div className="max-w-2xl lg:max-w-3xl mx-auto px-3 sm:px-4 pb-6 sm:pb-8 lg:pb-12">
           <div className="grid grid-cols-3 gap-2 sm:gap-4 lg:gap-6 text-center">
             <div className="p-3 sm:p-4 lg:p-6 rounded-xl lg:rounded-2xl bg-hub-card border border-white/10">
-              <div className="text-xl sm:text-2xl lg:text-4xl font-extrabold text-hub-text">{projects.length}</div>
+              <div className="text-xl sm:text-2xl lg:text-4xl font-extrabold text-hub-text">71</div>
               <div className="text-[10px] sm:text-xs lg:text-sm text-hub-muted mt-1">{t.projects}</div>
             </div>
             <div className="p-3 sm:p-4 lg:p-6 rounded-xl lg:rounded-2xl bg-hub-card border border-white/10">

@@ -414,7 +414,7 @@ export const translations: Record<string, Record<string, string>> = {
     downloadPdf: "تحميل العروض التقديمية PDF",
     pdfResources: "موارد PDF",
     pdfDescription: "حمّل العروض التقديمية المفصلة لأفضل مشاريعنا.",
-    footerText: "62 مشروع رقمي · مطاعم، ذكاء اصطناعي، طاقة، تسويق والمزيد",
+    footerText: "71 مشروع رقمي · مطاعم، ذكاء اصطناعي، طاقة، تسويق والمزيد",
     footerClick: "انقر على أي بطاقة لزيارة المشروع!",
     footerPassion: "بُني بشغف وذكاء اصطناعي — 2026",
     successSubscribe: "تم الاشتراك بنجاح!",

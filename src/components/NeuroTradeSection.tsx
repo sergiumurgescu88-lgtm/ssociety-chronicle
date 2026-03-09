@@ -392,6 +392,26 @@ const NeuroTradeSection = () => {
             </div>
           </div>
 
+          {/* Live site preview */}
+          <div className="rounded-xl sm:rounded-2xl border border-blue-500/10 bg-blue-500/[0.03] overflow-hidden mb-6 sm:mb-8">
+            <div className="flex items-center gap-2 px-4 py-2.5 border-b border-blue-500/10">
+              <div className="flex gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
+                <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
+                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/60" />
+              </div>
+              <span className="text-[10px] sm:text-xs text-blue-200/40 font-mono truncate">neurossociety.lovable.app</span>
+            </div>
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                src="https://neurossociety.lovable.app"
+                className="absolute inset-0 w-full h-full border-0"
+                title="NeuroTrade Live Preview"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
           {/* Mini stats */}
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mb-6 sm:mb-8">
             {c.miniStats.map((s, i) => (

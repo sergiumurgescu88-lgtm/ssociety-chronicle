@@ -76,7 +76,7 @@ export const translations: Record<string, Record<string, string>> = {
   en: {
     heroTitle: "Welcome to SSociety HUB!",
     heroSubtitle: "I'm Sergiu, the architect of SSociety HUB. Here you'll find everything we've built together with our team.",
-    heroDescription: "61 active projects and many more in progress. Not a portfolio, but a world in continuous development.\n\nFrom AI bots serving restaurants and smart solar systems, to creative tools, security platforms and lifestyle projects.\n\nExplore, get inspired, or let's build something together.",
+    heroDescription: "71 active projects and many more in progress. Not a portfolio, but a world in continuous development.\n\nFrom AI bots serving restaurants and smart solar systems, to creative tools, security platforms and lifestyle projects.\n\nExplore, get inspired, or let's build something together.",
     freeAccessTitle: "Everything is 100% Free!",
     freeAccessSubtitle: "Unlock all 62 premium features instantly by joining our newsletter.",
     subscribePlaceholder: "Your email address",

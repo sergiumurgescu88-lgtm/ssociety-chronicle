@@ -8,9 +8,7 @@ import HeroSection from '@/components/HeroSection';
 import StatsOverview from '@/components/StatsOverview';
 import WhatsAppCTA from '@/components/WhatsAppCTA';
 import WhatsAllSection from '@/components/WhatsAllSection';
-
-import InstantMenuSection from '@/components/InstantMenuSection';
-import WildBotSection from '@/components/WildBotSection';
+ WildBotSection from '@/components/WildBotSection';
 import SecureScanSection from '@/components/SecureScanSection';
 import AIStudioSection from '@/components/AIStudioSection';
 import VentureAISection from '@/components/VentureAISection';
@@ -111,8 +109,7 @@ const Index = () => {
         <DownloadSection />
         <WhatsAllStealthSection />
         <SecureScanSection />
-        <AIStudioSection />
-        <VentureAISection />
+        <AIStudireAISection />
         <WildBotSection />
 
         <FilterBar activeCategory={activeCategory} setActiveCategory={setActiveCategory} />

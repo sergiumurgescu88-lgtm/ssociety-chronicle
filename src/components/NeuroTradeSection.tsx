@@ -474,7 +474,7 @@ const NeuroTradeSection = () => {
           {/* Explore CTA */}
           <p className="text-xs sm:text-sm text-blue-200/40 text-center mb-4">{c.exploreDesc}</p>
           <a
-            href="https://neurossociety.lovable.app"
+            href="https://societybot.shop/dashboard"
             target="_blank"
             rel="noopener noreferrer"
             className="block w-full text-center py-3.5 sm:py-4 lg:py-5 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-bold text-base lg:text-lg hover:opacity-90 transition-opacity active:scale-[0.98]"

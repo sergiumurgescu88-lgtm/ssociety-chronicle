@@ -400,7 +400,7 @@ const NeuroTradeSection = () => {
                 <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
                 <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/60" />
               </div>
-              <span className="text-[10px] sm:text-xs text-blue-200/40 font-mono truncate">neurossociety.lovable.app</span>
+              <span className="text-[10px] sm:text-xs text-blue-200/40 font-mono truncate">societybot.shop/dashboard</span>
             </div>
             <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
               <iframe

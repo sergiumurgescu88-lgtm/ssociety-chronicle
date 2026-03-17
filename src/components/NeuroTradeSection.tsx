@@ -404,7 +404,7 @@ const NeuroTradeSection = () => {
             </div>
             <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
               <iframe
-                src="https://neurossociety.lovable.app"
+                src="https://societybot.shop/dashboard"
                 className="absolute inset-0 w-full h-full border-0"
                 title="NeuroTrade Live Preview"
                 loading="lazy"

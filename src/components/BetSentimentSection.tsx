@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, TrendingUp, Brain, BarChart3, Shield, Activity, Target, Zap, LineChart, Bell } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import betsentimentPreview from '@/assets/betsentiment-preview.png';
 
 const featureIcons = [Brain, Activity, BarChart3, Target, LineChart, Bell, Shield, Zap];
 
@@ -382,13 +383,21 @@ const BetSentimentSection = () => {
               </div>
               <span className="text-[10px] sm:text-xs text-amber-200/40 font-mono truncate">societybot.shop</span>
             </div>
-            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-              <iframe
-                src="https://societybot.shop/"
-                className="absolute inset-0 w-full h-full border-0"
-                title="BetSentiment AI Live Preview"
-                loading="lazy"
-              />
+            <div className="relative w-full">
+              <a href="https://societybot.shop/" target="_blank" rel="noopener noreferrer" className="block group">
+                <img
+                  src={betsentimentPreview}
+                  alt="BetSentiment AI Live Preview"
+                  className="w-full h-auto block"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  <span className="px-6 py-3 rounded-xl bg-amber-500 text-white font-bold text-sm flex items-center gap-2">
+                    <ExternalLink className="w-4 h-4" />
+                    Deschide Site →
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
         </motion.div>

@@ -19,6 +19,7 @@ import SSocietyViewSection from '@/components/SSocietyViewSection';
 import AIStudioSection from '@/components/AIStudioSection';
 import VentureAISection from '@/components/VentureAISection';
 import NeuroTradeSection from '@/components/NeuroTradeSection';
+import BetSentimentSection from '@/components/BetSentimentSection';
 import ClaudeTradingSection from '@/components/ClaudeTradingSection';
 import SocietyHubStoreSection from '@/components/SocietyHubStoreSection';
 import DownloadSection from '@/components/DownloadSection';
@@ -108,6 +109,7 @@ const Index = () => {
         <SocietyHubStoreSection />
         <MBEuroPartsSection />
         <NeuroTradeSection />
+        <BetSentimentSection />
         <ClaudeTradingSection />
         <WhatsAllSection />
         <MrDeliverySection />

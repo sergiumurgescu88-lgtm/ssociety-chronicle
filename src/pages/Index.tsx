@@ -109,6 +109,7 @@ const Index = () => {
         <SocietyHubStoreSection />
         <MBEuroPartsSection />
         <NeuroTradeSection />
+        <BetSentimentSection />
         <ClaudeTradingSection />
         <WhatsAllSection />
         <MrDeliverySection />

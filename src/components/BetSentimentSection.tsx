@@ -399,6 +399,7 @@ const BetSentimentSection = () => {
                 </div>
               </a>
             </div>
+          </div>
         </motion.div>
 
         {/* How it works */}

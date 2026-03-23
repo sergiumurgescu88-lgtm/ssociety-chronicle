@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, TrendingUp, Brain, BarChart3, Shield, Activity, Target, Zap, LineChart, Bell } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import betsentimentPreview from '@/assets/betsentiment-preview.png';
 
 const featureIcons = [Brain, Activity, BarChart3, Target, LineChart, Bell, Shield, Zap];
 

@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
 import { useLanguage } from '@/context/LanguageContext';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
+import govroPreview from '@/assets/govro-preview.jpg';
 
 const i18n: Record<string, {
   badge: string; title: string; desc: string; cta: string;
@@ -237,8 +238,16 @@ const GovROSection = () => {
                 <span className="text-xs text-blue-300/60 font-mono">govro.online</span>
               </div>
             </div>
-            <div className="aspect-video">
-              <iframe src="https://govro.online/" className="w-full h-full border-0" title="GovRO Forum Public AI" loading="lazy" sandbox="allow-scripts allow-same-origin" />
+            <div className="relative w-full">
+              <a href="https://govro.online/" target="_blank" rel="noopener noreferrer" className="block group">
+                <img src={govroPreview} alt="GovRO Forum Public AI" className="w-full h-auto block" loading="lazy" width={1920} height={1080} />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+                  <span className="px-6 py-3 rounded-xl bg-blue-500 text-white font-bold text-sm flex items-center gap-2">
+                    <ExternalLink className="w-4 h-4" />
+                    Deschide Site →
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
 

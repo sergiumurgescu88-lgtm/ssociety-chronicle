@@ -18,6 +18,7 @@ import LifeOSSection from '@/components/LifeOSSection';
 import SSocietyViewSection from '@/components/SSocietyViewSection';
 import GovROSection from '@/components/GovROSection';
 import RestaurantAuditProSection from '@/components/RestaurantAuditProSection';
+import AgentulMeuSection from '@/components/AgentulMeuSection';
 import AIStudioSection from '@/components/AIStudioSection';
 import VentureAISection from '@/components/VentureAISection';
 import NeuroTradeSection from '@/components/NeuroTradeSection';

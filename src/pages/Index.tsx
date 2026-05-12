@@ -128,6 +128,7 @@ const Index = () => {
         <DownloadSection />
         <GovROSection />
         <RestaurantAuditProSection />
+        <AgentulMeuSection />
 
         <FilterBar activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
 

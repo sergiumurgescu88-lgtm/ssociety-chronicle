@@ -110,13 +110,15 @@ const Index = () => {
           </div>
         </div>
 
+        <AgentulMeuSection />
+        <MrDeliverySection />
+        <DaRomaniaSection />
         <SocietyHubStoreSection />
         <MBEuroPartsSection />
         <NeuroTradeSection />
         <BetSentimentSection />
         <ClaudeTradingSection />
         <WhatsAllSection />
-        <MrDeliverySection />
         <SSocietyStudioSection />
         <PromptLabSection />
         <InstantMenuSection />
@@ -129,7 +131,7 @@ const Index = () => {
         <DownloadSection />
         <GovROSection />
         <RestaurantAuditProSection />
-        <AgentulMeuSection />
+
 
         <FilterBar activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
 

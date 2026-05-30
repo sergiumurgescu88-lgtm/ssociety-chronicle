@@ -202,10 +202,10 @@ const SocietyHubStoreSection = () => {
                 <div className="w-3 h-3 rounded-full bg-amber-500/80" />
                 <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
               </div>
-              <div className="flex-1 bg-white/5 rounded-lg px-3 py-1.5 text-xs sm:text-sm text-hub-muted font-mono">ssocietyhub.store</div>
+              <div className="flex-1 bg-white/5 rounded-lg px-3 py-1.5 text-xs sm:text-sm text-hub-muted font-mono">package-to-program.lovable.app</div>
             </div>
             <div className="aspect-[16/9] sm:aspect-[16/8] lg:aspect-[16/9]">
-              <iframe src="https://ssocietyhub.store/" className="w-full h-full border-0" title="SocietyHUB CRM Imobiliar PRO" loading="lazy" />
+              <iframe src="https://package-to-program.lovable.app" className="w-full h-full border-0" title="SocietyHUB CRM Imobiliar PRO" loading="lazy" />
             </div>
           </div>
         </motion.div>

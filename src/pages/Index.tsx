@@ -28,6 +28,7 @@ import SocietyHubStoreSection from '@/components/SocietyHubStoreSection';
 import DownloadSection from '@/components/DownloadSection';
 import MBEuroPartsSection from '@/components/MBEuroPartsSection';
 import MrDeliverySection from '@/components/MrDeliverySection';
+import DaRomaniaSection from '@/components/DaRomaniaSection';
 import FilterBar from '@/components/FilterBar';
 import ProjectCard from '@/components/ProjectCard';
 import SectionHeader from '@/components/SectionHeader';

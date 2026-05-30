@@ -28,6 +28,7 @@ import SocietyHubStoreSection from '@/components/SocietyHubStoreSection';
 import DownloadSection from '@/components/DownloadSection';
 import MBEuroPartsSection from '@/components/MBEuroPartsSection';
 import MrDeliverySection from '@/components/MrDeliverySection';
+import DaRomaniaSection from '@/components/DaRomaniaSection';
 import FilterBar from '@/components/FilterBar';
 import ProjectCard from '@/components/ProjectCard';
 import SectionHeader from '@/components/SectionHeader';
@@ -109,13 +110,15 @@ const Index = () => {
           </div>
         </div>
 
+        <AgentulMeuSection />
+        <MrDeliverySection />
+        <DaRomaniaSection />
         <SocietyHubStoreSection />
         <MBEuroPartsSection />
         <NeuroTradeSection />
         <BetSentimentSection />
         <ClaudeTradingSection />
         <WhatsAllSection />
-        <MrDeliverySection />
         <SSocietyStudioSection />
         <PromptLabSection />
         <InstantMenuSection />
@@ -128,7 +131,7 @@ const Index = () => {
         <DownloadSection />
         <GovROSection />
         <RestaurantAuditProSection />
-        <AgentulMeuSection />
+
 
         <FilterBar activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
 

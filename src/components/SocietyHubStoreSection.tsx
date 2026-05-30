@@ -202,10 +202,10 @@ const SocietyHubStoreSection = () => {
                 <div className="w-3 h-3 rounded-full bg-amber-500/80" />
                 <div className="w-3 h-3 rounded-full bg-emerald-500/80" />
               </div>
-              <div className="flex-1 bg-white/5 rounded-lg px-3 py-1.5 text-xs sm:text-sm text-hub-muted font-mono">ssocietyhub.store</div>
+              <div className="flex-1 bg-white/5 rounded-lg px-3 py-1.5 text-xs sm:text-sm text-hub-muted font-mono">package-to-program.lovable.app</div>
             </div>
             <div className="aspect-[16/9] sm:aspect-[16/8] lg:aspect-[16/9]">
-              <iframe src="https://ssocietyhub.store/" className="w-full h-full border-0" title="SocietyHUB CRM Imobiliar PRO" loading="lazy" />
+              <iframe src="https://package-to-program.lovable.app" className="w-full h-full border-0" title="SocietyHUB CRM Imobiliar PRO" loading="lazy" />
             </div>
           </div>
         </motion.div>
@@ -233,7 +233,7 @@ const SocietyHubStoreSection = () => {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="text-center">
-          <a href="https://ssocietyhub.store/" target="_blank" rel="noopener noreferrer"
+          <a href="https://package-to-program.lovable.app" target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-8 sm:px-10 lg:px-12 py-4 lg:py-5 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold text-base sm:text-lg lg:text-xl hover:opacity-90 transition-all active:scale-[0.98] shadow-lg shadow-amber-500/25">
             <ExternalLink className="w-5 h-5 lg:w-6 lg:h-6" />
             {c.cta}
